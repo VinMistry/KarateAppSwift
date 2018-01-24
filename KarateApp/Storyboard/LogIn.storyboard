@@ -26,7 +26,7 @@
         <!--Log In-->
         <scene sceneID="Bkj-LT-cQR">
             <objects>
-                <viewController title="Log In" id="Vbt-0a-j0c" sceneMemberID="viewController">
+                <viewController title="Log In" id="Vbt-0a-j0c" customClass="LogInViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xau-a1-Q4H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
         <!--Sign Up-->
         <scene sceneID="Ll8-p3-56p">
             <objects>
-                <viewController title="Sign Up" id="lwS-je-LKy" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="lwS-je-LKy" customClass="SignUpViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AJd-IB-Kuo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

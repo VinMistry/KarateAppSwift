@@ -18,6 +18,14 @@
 		0D9126452018EC0800EF870B /* Learning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126432018EC0800EF870B /* Learning.storyboard */; };
 		0D9126472018EC2F00EF870B /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126462018EC2F00EF870B /* Payment.storyboard */; };
 		0D91264A2018EE7000EF870B /* Updates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126482018EE7000EF870B /* Updates.storyboard */; };
+		0D91264C2018F4AC00EF870B /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */; };
+		0D91264E2018F4CB00EF870B /* UpdatesTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91264D2018F4CB00EF870B /* UpdatesTabTableViewController.swift */; };
+		0D9126502018F4E700EF870B /* PaymentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91264F2018F4E600EF870B /* PaymentTabViewController.swift */; };
+		0D9126522018F51500EF870B /* LearningTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9126512018F51500EF870B /* LearningTabTableViewController.swift */; };
+		0D9126562018FE2600EF870B /* GetTheDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9126552018FE2600EF870B /* GetTheDate.swift */; };
+		0D912659201905BB00EF870B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D912658201905BB00EF870B /* Settings.storyboard */; };
+		0D91265B2019096000EF870B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91265A2019096000EF870B /* LogInViewController.swift */; };
+		0D91265D2019097B00EF870B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91265C2019097B00EF870B /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		0D9126442018EC0800EF870B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = KarateApp/Storyboard/Base.lproj/Learning.storyboard; sourceTree = "<group>"; };
 		0D9126462018EC2F00EF870B /* Payment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		0D9126492018EE7000EF870B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = KarateApp/Storyboard/Base.lproj/Updates.storyboard; sourceTree = "<group>"; };
+		0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		0D91264D2018F4CB00EF870B /* UpdatesTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabTableViewController.swift; sourceTree = "<group>"; };
+		0D91264F2018F4E600EF870B /* PaymentTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTabViewController.swift; sourceTree = "<group>"; };
+		0D9126512018F51500EF870B /* LearningTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningTabTableViewController.swift; sourceTree = "<group>"; };
+		0D9126552018FE2600EF870B /* GetTheDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTheDate.swift; sourceTree = "<group>"; };
+		0D912658201905BB00EF870B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		0D91265A2019096000EF870B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		0D91265C2019097B00EF870B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +101,13 @@
 		0D2FC38A2016941E001F2872 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0D73465F1FD9AC49005175E9 /* LaunchScreen.storyboard */,
+				0D2FC388201693F4001F2872 /* LogIn.storyboard */,
+				0D73465A1FD9AC49005175E9 /* Main.storyboard */,
 				0D9126482018EE7000EF870B /* Updates.storyboard */,
 				0D9126462018EC2F00EF870B /* Payment.storyboard */,
 				0D9126432018EC0800EF870B /* Learning.storyboard */,
-				0D73465A1FD9AC49005175E9 /* Main.storyboard */,
-				0D2FC388201693F4001F2872 /* LogIn.storyboard */,
-				0D73465F1FD9AC49005175E9 /* LaunchScreen.storyboard */,
+				0D912658201905BB00EF870B /* Settings.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -99,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0D7346551FD9AC49005175E9 /* KarateApp */,
+				0D7346581FD9AC49005175E9 /* ViewController.swift */,
 				0D73466A1FD9AC4A005175E9 /* KarateAppTests */,
 				0D7346751FD9AC4A005175E9 /* KarateAppUITests */,
 				0D7346541FD9AC49005175E9 /* Products */,
@@ -118,10 +136,10 @@
 		0D7346551FD9AC49005175E9 /* KarateApp */ = {
 			isa = PBXGroup;
 			children = (
-				0D7346561FD9AC49005175E9 /* AppDelegate.swift */,
-				0D7346581FD9AC49005175E9 /* ViewController.swift */,
 				0D2FC38A2016941E001F2872 /* Storyboard */,
-				0D73465D1FD9AC49005175E9 /* Assets.xcassets */,
+				0D9126532018F53300EF870B /* ViewControllers */,
+				0D9126572018FE3300EF870B /* Models */,
+				0D9126542018F57E00EF870B /* Supporting Files */,
 				0D7346621FD9AC49005175E9 /* Info.plist */,
 			);
 			path = KarateApp;
@@ -143,6 +161,36 @@
 				0D7346781FD9AC4A005175E9 /* Info.plist */,
 			);
 			path = KarateAppUITests;
+			sourceTree = "<group>";
+		};
+		0D9126532018F53300EF870B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D91265C2019097B00EF870B /* SignUpViewController.swift */,
+				0D91265A2019096000EF870B /* LogInViewController.swift */,
+				0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */,
+				0D91264D2018F4CB00EF870B /* UpdatesTabTableViewController.swift */,
+				0D91264F2018F4E600EF870B /* PaymentTabViewController.swift */,
+				0D9126512018F51500EF870B /* LearningTabTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0D9126542018F57E00EF870B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D7346561FD9AC49005175E9 /* AppDelegate.swift */,
+				0D73465D1FD9AC49005175E9 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0D9126572018FE3300EF870B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D9126552018FE2600EF870B /* GetTheDate.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +303,7 @@
 				0D9126452018EC0800EF870B /* Learning.storyboard in Resources */,
 				0D9126472018EC2F00EF870B /* Payment.storyboard in Resources */,
 				0D2FC389201693F4001F2872 /* LogIn.storyboard in Resources */,
+				0D912659201905BB00EF870B /* Settings.storyboard in Resources */,
 				0D7346611FD9AC49005175E9 /* LaunchScreen.storyboard in Resources */,
 				0D91264A2018EE7000EF870B /* Updates.storyboard in Resources */,
 				0D73465E1FD9AC49005175E9 /* Assets.xcassets in Resources */,
@@ -284,7 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D7346591FD9AC49005175E9 /* ViewController.swift in Sources */,
+				0D9126502018F4E700EF870B /* PaymentTabViewController.swift in Sources */,
 				0D7346571FD9AC49005175E9 /* AppDelegate.swift in Sources */,
+				0D91264E2018F4CB00EF870B /* UpdatesTabTableViewController.swift in Sources */,
+				0D91265B2019096000EF870B /* LogInViewController.swift in Sources */,
+				0D91264C2018F4AC00EF870B /* HomeTabViewController.swift in Sources */,
+				0D91265D2019097B00EF870B /* SignUpViewController.swift in Sources */,
+				0D9126562018FE2600EF870B /* GetTheDate.swift in Sources */,
+				0D9126522018F51500EF870B /* LearningTabTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
