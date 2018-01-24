@@ -15,6 +15,9 @@
 		0D7346611FD9AC49005175E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D73465F1FD9AC49005175E9 /* LaunchScreen.storyboard */; };
 		0D73466C1FD9AC4A005175E9 /* KarateAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D73466B1FD9AC4A005175E9 /* KarateAppTests.swift */; };
 		0D7346771FD9AC4A005175E9 /* KarateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7346761FD9AC4A005175E9 /* KarateAppUITests.swift */; };
+		0D9126452018EC0800EF870B /* Learning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126432018EC0800EF870B /* Learning.storyboard */; };
+		0D9126472018EC2F00EF870B /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126462018EC2F00EF870B /* Payment.storyboard */; };
+		0D91264A2018EE7000EF870B /* Updates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126482018EE7000EF870B /* Updates.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		0D7346721FD9AC4A005175E9 /* KarateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7346761FD9AC4A005175E9 /* KarateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarateAppUITests.swift; sourceTree = "<group>"; };
 		0D7346781FD9AC4A005175E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D9126442018EC0800EF870B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = KarateApp/Storyboard/Base.lproj/Learning.storyboard; sourceTree = "<group>"; };
+		0D9126462018EC2F00EF870B /* Payment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		0D9126492018EE7000EF870B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = KarateApp/Storyboard/Base.lproj/Updates.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 		0D2FC38A2016941E001F2872 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0D9126482018EE7000EF870B /* Updates.storyboard */,
+				0D9126462018EC2F00EF870B /* Payment.storyboard */,
+				0D9126432018EC0800EF870B /* Learning.storyboard */,
 				0D73465A1FD9AC49005175E9 /* Main.storyboard */,
 				0D2FC388201693F4001F2872 /* LogIn.storyboard */,
 				0D73465F1FD9AC49005175E9 /* LaunchScreen.storyboard */,
@@ -243,8 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9126452018EC0800EF870B /* Learning.storyboard in Resources */,
+				0D9126472018EC2F00EF870B /* Payment.storyboard in Resources */,
 				0D2FC389201693F4001F2872 /* LogIn.storyboard in Resources */,
 				0D7346611FD9AC49005175E9 /* LaunchScreen.storyboard in Resources */,
+				0D91264A2018EE7000EF870B /* Updates.storyboard in Resources */,
 				0D73465E1FD9AC49005175E9 /* Assets.xcassets in Resources */,
 				0D73465C1FD9AC49005175E9 /* Main.storyboard in Resources */,
 			);
@@ -322,6 +334,22 @@
 				0D7346601FD9AC49005175E9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0D9126432018EC0800EF870B /* Learning.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D9126442018EC0800EF870B /* Base */,
+			);
+			name = Learning.storyboard;
+			sourceTree = "<group>";
+		};
+		0D9126482018EE7000EF870B /* Updates.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D9126492018EE7000EF870B /* Base */,
+			);
+			name = Updates.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
