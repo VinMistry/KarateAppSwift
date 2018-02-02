@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5HC-dd-dmZ">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,17 +15,59 @@
             <objects>
                 <tableViewController id="5HC-dd-dmZ" customClass="LearningTabTableViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UrM-IE-qDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="learningCategories" id="MuT-mF-weD">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="learningCategories" rowHeight="266" id="MuT-mF-weD" customClass="LearningTableViewCell" customModule="KarateApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="266"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MuT-mF-weD" id="EgW-Hu-9Z4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="265.66666666666669"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-wg-Q50">
+                                            <rect key="frame" x="20" y="11" width="374" height="244"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8l-xv-8uL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pue-c4-E43">
+                                                    <rect key="frame" x="0.0" y="51" width="374" height="193"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="193" id="BGV-sB-jWo"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="G8l-xv-8uL" firstAttribute="trailing" secondItem="Pue-c4-E43" secondAttribute="trailing" id="0oL-Qp-jgZ"/>
+                                                <constraint firstItem="Pue-c4-E43" firstAttribute="top" secondItem="G8l-xv-8uL" secondAttribute="bottom" constant="8" id="5sE-PI-KsS"/>
+                                                <constraint firstAttribute="trailing" secondItem="G8l-xv-8uL" secondAttribute="trailing" id="Fu8-J2-7Oa"/>
+                                                <constraint firstItem="G8l-xv-8uL" firstAttribute="leading" secondItem="Pue-c4-E43" secondAttribute="leading" id="L0H-kP-ZJq"/>
+                                                <constraint firstItem="G8l-xv-8uL" firstAttribute="leading" secondItem="LO2-wg-Q50" secondAttribute="leading" id="S1K-ae-y09"/>
+                                                <constraint firstItem="G8l-xv-8uL" firstAttribute="top" secondItem="LO2-wg-Q50" secondAttribute="top" id="f0G-Bm-Zac"/>
+                                                <constraint firstAttribute="bottom" secondItem="Pue-c4-E43" secondAttribute="bottom" id="phJ-mv-Z24"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LO2-wg-Q50" firstAttribute="trailing" secondItem="EgW-Hu-9Z4" secondAttribute="trailingMargin" id="3bY-zk-hVf"/>
+                                        <constraint firstItem="LO2-wg-Q50" firstAttribute="leading" secondItem="EgW-Hu-9Z4" secondAttribute="leadingMargin" id="7Zj-af-Ghm"/>
+                                        <constraint firstItem="LO2-wg-Q50" firstAttribute="top" secondItem="EgW-Hu-9Z4" secondAttribute="topMargin" id="PGe-JO-QjF"/>
+                                        <constraint firstItem="LO2-wg-Q50" firstAttribute="bottom" secondItem="EgW-Hu-9Z4" secondAttribute="bottomMargin" id="cJk-Wr-DOc"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="learnCategoryLabel" destination="G8l-xv-8uL" id="WKR-T2-7Dm"/>
+                                    <outlet property="learningCategoryImage" destination="Pue-c4-E43" id="TLM-fm-OxX"/>
+                                    <outlet property="learningCellView" destination="LO2-wg-Q50" id="IAi-ge-DpA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -36,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilq-sI-UBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3004" y="703"/>
+            <point key="canvasLocation" x="-3004.347826086957" y="702.71739130434787"/>
         </scene>
     </scenes>
 </document>

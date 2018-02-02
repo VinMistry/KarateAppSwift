@@ -26,6 +26,7 @@
 		0D912659201905BB00EF870B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D912658201905BB00EF870B /* Settings.storyboard */; };
 		0D91265B2019096000EF870B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91265A2019096000EF870B /* LogInViewController.swift */; };
 		0D91265D2019097B00EF870B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91265C2019097B00EF870B /* SignUpViewController.swift */; };
+		0DDA6919201E3C1000B658D3 /* LearningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		0D912658201905BB00EF870B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		0D91265A2019096000EF870B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0D91265C2019097B00EF870B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LearningTableViewCell.swift; path = KarateApp/ViewControllers/LearningTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				0D91264D2018F4CB00EF870B /* UpdatesTabTableViewController.swift */,
 				0D91264F2018F4E600EF870B /* PaymentTabViewController.swift */,
 				0D9126512018F51500EF870B /* LearningTabTableViewController.swift */,
+				0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				0D7346591FD9AC49005175E9 /* ViewController.swift in Sources */,
 				0D9126502018F4E700EF870B /* PaymentTabViewController.swift in Sources */,
 				0D7346571FD9AC49005175E9 /* AppDelegate.swift in Sources */,
+				0DDA6919201E3C1000B658D3 /* LearningTableViewCell.swift in Sources */,
 				0D91264E2018F4CB00EF870B /* UpdatesTabTableViewController.swift in Sources */,
 				0D91265B2019096000EF870B /* LogInViewController.swift in Sources */,
 				0D91264C2018F4AC00EF870B /* HomeTabViewController.swift in Sources */,

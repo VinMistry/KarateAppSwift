@@ -10,9 +10,11 @@ import UIKit
 
 class LearningTabTableViewController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +31,42 @@ class LearningTabTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    // Make the background color show through
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "learningCategories", for: indexPath) as! LearningTableViewCell
+        
         // Configure the cell...
-
+        let cellClass = LearningTableViewCell()
+        let labelText = cellClass.categoryNames[indexPath.section]
+        cell.learnCategoryLabel.text = labelText
+        
+        if indexPath.section == 0 {
+            cell.learningCategoryImage.image = #imageLiteral(resourceName: "karateInJapanese")
+        }
+        else if indexPath.section == 1 {
+            cell.learningCategoryImage.image = #imageLiteral(resourceName: "Jud-gyaku-zuki")
+        }
+        else {
+            cell.learningCategoryImage.image = #imageLiteral(resourceName: "comingSoon")
+        }
+        cell.sizeToFit()
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
