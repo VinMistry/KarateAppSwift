@@ -16,7 +16,7 @@ class LearningTableViewCell: UITableViewCell {
     
     @IBOutlet weak var learningCellView: UIView!
     
-    var categoryNames = ["Japanese","Technique","Coming Soon"]
+    var categoryNames = ["Japanese","Technique"]
     
     
     override func awakeFromNib() {

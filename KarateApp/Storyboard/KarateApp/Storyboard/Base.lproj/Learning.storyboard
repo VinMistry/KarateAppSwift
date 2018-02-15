@@ -67,6 +67,7 @@
                                     <outlet property="learnCategoryLabel" destination="G8l-xv-8uL" id="WKR-T2-7Dm"/>
                                     <outlet property="learningCategoryImage" destination="Pue-c4-E43" id="TLM-fm-OxX"/>
                                     <outlet property="learningCellView" destination="LO2-wg-Q50" id="IAi-ge-DpA"/>
+                                    <segue destination="PGF-eq-K04" kind="show" id="ezW-UA-zJB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,6 +81,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilq-sI-UBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3004.347826086957" y="702.71739130434787"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="TsC-MA-0mH">
+            <objects>
+                <tableViewController id="PGF-eq-K04" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oK1-31-gX6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="knoweldge" id="afq-L2-p6F">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="afq-L2-p6F" id="4nP-ui-JGW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PGF-eq-K04" id="cWd-Mk-MlS"/>
+                            <outlet property="delegate" destination="PGF-eq-K04" id="0uv-cK-LTN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5U8-WL-cTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2051" y="703"/>
         </scene>
     </scenes>
 </document>

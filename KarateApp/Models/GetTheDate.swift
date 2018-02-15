@@ -33,7 +33,7 @@ class GetTheDate {
     public func nextClassDate() -> String {
         let components = calendar.dateComponents([.year, .month, .day, .weekday], from: Date())
         let day = components.weekday!
-        if day < 2  || day == 7 {
+        if day < 3  || day == 7 {
             print("The next lesson is: Tuesday")
             print("Days to next lesson: \(3 - day)")
             return "Tuesday at 6:30pm"

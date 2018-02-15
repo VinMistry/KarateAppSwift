@@ -31,7 +31,7 @@ class LearningTabTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,11 +57,8 @@ class LearningTabTableViewController: UITableViewController {
         if indexPath.section == 0 {
             cell.learningCategoryImage.image = #imageLiteral(resourceName: "karateInJapanese")
         }
-        else if indexPath.section == 1 {
+        else{
             cell.learningCategoryImage.image = #imageLiteral(resourceName: "Jud-gyaku-zuki")
-        }
-        else {
-            cell.learningCategoryImage.image = #imageLiteral(resourceName: "comingSoon")
         }
         cell.sizeToFit()
         return cell
