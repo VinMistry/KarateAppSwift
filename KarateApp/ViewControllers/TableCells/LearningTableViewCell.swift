@@ -14,6 +14,8 @@ class LearningTableViewCell: UITableViewCell {
     
     @IBOutlet weak var learningCategoryImage: UIImageView!
     
+    
+    
     @IBOutlet weak var learningCellView: UIView!
     
     var categoryNames = ["Japanese","Technique"]
