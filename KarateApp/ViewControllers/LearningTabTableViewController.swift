@@ -68,9 +68,9 @@ class LearningTabTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
-            self.prepare(for: UIStoryboardSegue.init(identifier: "japaneseOption", source: self, destination: LearnJapaneseTableViewController()), sender: self)
+           self.performSegue(withIdentifier: "learnJapaneseOption", sender: self)
         case 1:
-            self.prepare(for: UIStoryboardSegue.init(identifier: "techniqueOption", source: self, destination: LearnTechniqueTableViewController()), sender: self)
+            self.performSegue(withIdentifier: "learnTechniqueOption", sender: self)
         default:
             print("Nothing to do")
         }
@@ -112,7 +112,7 @@ class LearningTabTableViewController: UITableViewController {
     
     
     // MARK: - Navigation
-    
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -131,5 +131,5 @@ class LearningTabTableViewController: UITableViewController {
                 }
                 
         }
-    }
+    }*/
 }
