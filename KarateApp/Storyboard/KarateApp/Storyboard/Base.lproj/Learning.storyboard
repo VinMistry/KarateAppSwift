@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -67,7 +68,7 @@
                                     <outlet property="learnCategoryLabel" destination="G8l-xv-8uL" id="WKR-T2-7Dm"/>
                                     <outlet property="learningCategoryImage" destination="Pue-c4-E43" id="TLM-fm-OxX"/>
                                     <outlet property="learningCellView" destination="LO2-wg-Q50" id="IAi-ge-DpA"/>
-                                    <segue destination="PGF-eq-K04" kind="show" id="ezW-UA-zJB"/>
+                                    <segue destination="PGF-eq-K04" kind="show" id="LQZ-as-wEU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,21 +83,30 @@
             </objects>
             <point key="canvasLocation" x="-3004.347826086957" y="702.71739130434787"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Learn Japanese Table View Controller-->
         <scene sceneID="TsC-MA-0mH">
             <objects>
-                <tableViewController id="PGF-eq-K04" sceneMemberID="viewController">
+                <tableViewController id="PGF-eq-K04" customClass="LearnJapaneseTableViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oK1-31-gX6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="knoweldge" id="afq-L2-p6F">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="japaneseOption" textLabel="eWS-in-D9F" style="IBUITableViewCellStyleDefault" id="afq-L2-p6F">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="afq-L2-p6F" id="4nP-ui-JGW">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eWS-in-D9F">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -108,7 +118,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5U8-WL-cTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2051" y="703"/>
+            <point key="canvasLocation" x="-1930" y="703"/>
+        </scene>
+        <!--Learn Technique Table View Controller-->
+        <scene sceneID="TBa-Dc-U96">
+            <objects>
+                <viewController id="I37-tr-A6C" customClass="LearnTechniqueTableViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rTS-F9-7PC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ePY-HU-d7m"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLy-IR-is5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3021" y="1628"/>
         </scene>
     </scenes>
 </document>
