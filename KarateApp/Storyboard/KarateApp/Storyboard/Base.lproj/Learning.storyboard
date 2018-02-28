@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -120,7 +121,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcG-DS-CR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3004" y="1427"/>
+            <point key="canvasLocation" x="-2971" y="1436"/>
         </scene>
         <!--Learn Japanese Table View Controller-->
         <scene sceneID="TsC-MA-0mH">
@@ -147,6 +148,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ML5-nh-x8p" kind="show" identifier="showDetailLearning" id="MZe-Ma-SL6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -157,7 +161,60 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5U8-WL-cTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1930" y="703"/>
+            <point key="canvasLocation" x="-1845" y="649"/>
+        </scene>
+        <!--Japanese Page View Controller-->
+        <scene sceneID="QQV-qJ-WWK">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ML5-nh-x8p" customClass="JapanesePageViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agl-fh-Jub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-830" y="649"/>
+        </scene>
+        <!--Japanese Video View Controller-->
+        <scene sceneID="t0W-Fq-rdX">
+            <objects>
+                <viewController storyboardIdentifier="JapaneseVideo" id="Q1U-tQ-nuT" customClass="JapaneseVideoViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oqy-gO-TVz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MIr-VG-qML"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQa-AI-f8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="649"/>
+        </scene>
+        <!--Japanese Audio View Controller-->
+        <scene sceneID="vtq-JK-AkM">
+            <objects>
+                <viewController storyboardIdentifier="JapaneseAudio" id="x9m-DN-lA3" customClass="JapaneseAudioViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tho-im-Jxp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4gC-3e-l5V"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OvJ-gW-e2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.60869565217399" y="648.91304347826087"/>
+        </scene>
+        <!--Japanese Text View Controller-->
+        <scene sceneID="kYY-yB-1lU">
+            <objects>
+                <viewController storyboardIdentifier="JapaneseText" id="aDB-ja-Cad" customClass="JapaneseTextViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S12-uW-7No">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VTE-J9-vpK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JFi-Rx-uT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="648.91304347826087"/>
         </scene>
     </scenes>
 </document>

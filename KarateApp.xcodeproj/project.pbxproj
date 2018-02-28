@@ -33,6 +33,10 @@
 		0D91265B2019096000EF870B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91265A2019096000EF870B /* LogInViewController.swift */; };
 		0D91265D2019097B00EF870B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91265C2019097B00EF870B /* SignUpViewController.swift */; };
 		0DDA6919201E3C1000B658D3 /* LearningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */; };
+		0DE26C332046EF83009841E1 /* JapanesePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */; };
+		0DE26C352046F060009841E1 /* JapaneseTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */; };
+		0DE26C372046F0C5009841E1 /* JapaneseAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE26C362046F0C5009841E1 /* JapaneseAudioViewController.swift */; };
+		0DE26C392046F0E0009841E1 /* JapaneseVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE26C382046F0E0009841E1 /* JapaneseVideoViewController.swift */; };
 		17B78B0BC5A91D5EB9CA72FD /* Pods_KarateAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F981280006596BBC00BCD /* Pods_KarateAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +88,10 @@
 		0D91265A2019096000EF870B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0D91265C2019097B00EF870B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LearningTableViewCell.swift; path = KarateApp/ViewControllers/TableCells/LearningTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanesePageViewController.swift; sourceTree = "<group>"; };
+		0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseTextViewController.swift; sourceTree = "<group>"; };
+		0DE26C362046F0C5009841E1 /* JapaneseAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseAudioViewController.swift; sourceTree = "<group>"; };
+		0DE26C382046F0E0009841E1 /* JapaneseVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseVideoViewController.swift; sourceTree = "<group>"; };
 		171398A3246842A5B52A4D1C /* Pods-KarateAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KarateAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KarateAppTests/Pods-KarateAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		374AF51D8CD6D250BF880209 /* Pods-KarateAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KarateAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KarateAppUITests/Pods-KarateAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		43F1E2EB270D5E1473231563 /* Pods-KarateAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KarateAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KarateAppUITests/Pods-KarateAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +210,10 @@
 		0D9126532018F53300EF870B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */,
+				0DE26C382046F0E0009841E1 /* JapaneseVideoViewController.swift */,
+				0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */,
+				0DE26C362046F0C5009841E1 /* JapaneseAudioViewController.swift */,
 				0D91265C2019097B00EF870B /* SignUpViewController.swift */,
 				0D91265A2019096000EF870B /* LogInViewController.swift */,
 				0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */,
@@ -562,7 +574,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE26C372046F0C5009841E1 /* JapaneseAudioViewController.swift in Sources */,
 				0D7346591FD9AC49005175E9 /* ViewController.swift in Sources */,
+				0DE26C332046EF83009841E1 /* JapanesePageViewController.swift in Sources */,
 				0D05EA512035B95D00D8D0C5 /* UpdateModel.swift in Sources */,
 				0D05EA552035BA6600D8D0C5 /* UpdatesTableViewCell.swift in Sources */,
 				0D9126502018F4E700EF870B /* PaymentTabViewController.swift in Sources */,
@@ -573,9 +587,11 @@
 				0D91264C2018F4AC00EF870B /* HomeTabViewController.swift in Sources */,
 				0D91265D2019097B00EF870B /* SignUpViewController.swift in Sources */,
 				0D9126562018FE2600EF870B /* GetTheDate.swift in Sources */,
+				0DE26C352046F060009841E1 /* JapaneseTextViewController.swift in Sources */,
 				0D1F19A8203C5D2C00E0733A /* LearnJapaneseTableViewController.swift in Sources */,
 				0D0BB67F203A0526006F9033 /* LearnTechniqueTableViewController.swift in Sources */,
 				0D9126522018F51500EF870B /* LearningTabTableViewController.swift in Sources */,
+				0DE26C392046F0E0009841E1 /* JapaneseVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
