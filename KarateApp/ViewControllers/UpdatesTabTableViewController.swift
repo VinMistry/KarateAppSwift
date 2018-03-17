@@ -7,27 +7,61 @@
 //
 
 import UIKit
-
+import Firebase
 class UpdatesTabTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
+    //Creates a refresh control, which allows data to be refreshed when pulling down on table view
+    lazy var refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .white
+        let refreshText = NSMutableAttributedString(string: "Fetching New Updates ...")
+        let range = refreshText.mutableString.range(of: refreshText.string)
+        refreshText.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.white, range: range)
+        refreshControl.attributedTitle = refreshText
+        refreshControl.addTarget(self, action: #selector(refreshFire), for: .valueChanged)
+        return refreshControl
+    }()
     
-    var updateArray = [UpdateModel]()
-    var currentUpdateArray = [UpdateModel]()
+    var updateTextArray = [String]()
+    var updateTitleArray =  [String]()
+    var currentUpdateArray = [String]()
+    private var model = UpdateModel("","")
+    
+    private var ref = Database.database().reference()
+    private var  databaseHandle : DatabaseHandle?
+    
+    private func showUpdates() {
+       var postTitles = [String]()
+       var postText = [String]()
+        ref.child("Updates").observeSingleEvent(of: .value) { (newSnap) in
+            for child in (newSnap.children){
+                let snap = child as? DataSnapshot
+                if let actualPost = snap?.value as? String,
+                    let titles = snap?.key {
+                    var newt = titles.split(separator: ",")
+                    print(newt[1])
+                    postTitles.append(String(newt[1]))
+                    postText.append(actualPost)
+                    self.tableView.reloadData()
+                    print("Single Event posts: " , actualPost)
+                    print("Single Event titles: " , titles)
+                }
+            }
+            self.currentUpdateArray = postText.reversed()
+            self.updateTitleArray = postTitles.reversed()
+            self.tableView.reloadData()
+        }
+    }
+    
     private func setUpSearchBar() {
         searchBar.delegate = self
     }
     
-    private func setUpUpdates() {
-        updateArray.append(UpdateModel("hello","my name is blah"))
-        updateArray.append(UpdateModel("hjijj","Pink is a colour"))
-        updateArray.append(UpdateModel("pants","pants are grey"))
-        updateArray.append(UpdateModel("wait","what time is it?"))
-        currentUpdateArray = updateArray
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUpdates()
+        refreshControl = refresher
+        showUpdates()
         setUpSearchBar()
         searchBar.showsCancelButton = false
         // Uncomment the following line to preserve selection between presentations
@@ -37,14 +71,24 @@ class UpdatesTabTableViewController: UITableViewController, UISearchBarDelegate 
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    @objc func refreshFire()
+    {
+        model.refreshData()
+        updateTextArray =  model.postText.reversed()
+        currentUpdateArray = model.postText.reversed()
+        updateTitleArray = model.postTitles.reversed()
+        self.tableView.reloadData()
+        refresher.endRefreshing()
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchBar.showsCancelButton = true
         guard !searchText.isEmpty else {
-            currentUpdateArray = updateArray
+            currentUpdateArray = updateTextArray
             return
         }
-        currentUpdateArray = updateArray.filter({ update -> Bool in
-            return  update.updateMain.lowercased().contains(searchText.lowercased())
+        currentUpdateArray = updateTextArray.filter({ update -> Bool in
+            return  update.lowercased().contains(searchText.lowercased())
         })
         tableView.reloadData()
     }
@@ -57,7 +101,7 @@ class UpdatesTabTableViewController: UITableViewController, UISearchBarDelegate 
         searchBar.text = ""
         searchBar.showsCancelButton = false
         searchBar.endEditing(true)
-        currentUpdateArray = updateArray
+        currentUpdateArray = updateTextArray
         tableView.reloadData()
         
     }
@@ -84,8 +128,8 @@ class UpdatesTabTableViewController: UITableViewController, UISearchBarDelegate 
             return UITableViewCell()
         }
         
-        cell.updateTitleLabel.text = currentUpdateArray[indexPath.row].updateTitle
-        cell.updateBodyLabel.text = currentUpdateArray[indexPath.row].updateMain
+        cell.updateTitleLabel.text = updateTitleArray[indexPath.row]
+        cell.updateBodyLabel.text = currentUpdateArray[indexPath.row]
         
         return cell
         
@@ -104,5 +148,6 @@ class UpdatesTabTableViewController: UITableViewController, UISearchBarDelegate 
      // Pass the selected object to the new view controller.
      }
      */
+    
     
 }
