@@ -13,35 +13,29 @@ class UpdateModel {
     var updateTitle: String
     private var ref = Database.database().reference()
     private var  databaseHandle : DatabaseHandle?
-    var postText = [String]()
-    var postTitles = [String]()
-    private var postDictionary =  [String : String]()
-    var updateMain: String
+    var updateText: String
+    var updateDate: String
     
     init(_ updateTitle: String,_ updateMain: String) {
         self.updateTitle = updateTitle
-        self.updateMain = updateMain
+        self.updateText = updateMain
+        self.updateDate = ""
     }
-
-    @objc func refreshData() {
-        ref.child("Updates").observeSingleEvent(of: .value) { (newSnap) in
-            self.postTitles.removeAll()
-            self.postText.removeAll()
-            for child in (newSnap.children){
-                let snap = child as? DataSnapshot
-                if let actualPost = snap?.value as? String,
-                    let titles = snap?.key {
-                    var newt = titles.split(separator: ",")
-                    print(newt[1])
-                    self.postTitles.append(String(newt[1]))
-                    self.postText.append(actualPost)
-                   // self.tableView.reloadData()
-                    print("Single Event posts: " , actualPost)
-                    print("Single Event titles: " , titles)
-                   // self.refreshControl?.endRefreshing()
-                }
-            }
-        }
+    init() {
+        self.updateTitle = ""
+        self.updateText = ""
+        self.updateDate = ""
     }
-
+    
+    init?(_ snapshot: DataSnapshot) {
+        
+        guard let dict = snapshot.value as? [String:Any] else { return nil }
+        guard let updateText = dict["text"] as? String else {return nil}
+        guard let updateTitle = dict["title"] as? String else {return nil}
+        guard let updateDate = dict["dateAndTime"] as? String else {return nil}
+        
+        self.updateText = updateText
+        self.updateTitle = updateTitle
+        self.updateDate = updateDate
+    }
 }

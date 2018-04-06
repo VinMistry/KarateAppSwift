@@ -12,6 +12,16 @@
 		0D05EA512035B95D00D8D0C5 /* UpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05EA502035B95D00D8D0C5 /* UpdateModel.swift */; };
 		0D05EA552035BA6600D8D0C5 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05EA542035BA6600D8D0C5 /* UpdatesTableViewCell.swift */; };
 		0D0BB67F203A0526006F9033 /* LearnTechniqueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0BB67E203A0526006F9033 /* LearnTechniqueTableViewController.swift */; };
+		0D1D72F72076614B00392E81 /* PaymentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D72F62076614B00392E81 /* PaymentsTableViewController.swift */; };
+		0D1D72F9207661AB00392E81 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D72F8207661AB00392E81 /* CheckoutViewController.swift */; };
+		0D1D72FB207661B100392E81 /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D72FA207661B100392E81 /* CheckoutRowView.swift */; };
+		0D1D72FD207661B900392E81 /* PaymentContextFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D72FC207661B900392E81 /* PaymentContextFooterView.swift */; };
+		0D1D72FF207661C200392E81 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D72FE207661C200392E81 /* Buttons.swift */; };
+		0D1D73022076624100392E81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D73012076624100392E81 /* SettingsViewController.swift */; };
+		0D1D730420766A9A00392E81 /* ConnectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D730320766A9A00392E81 /* ConnectionModel.swift */; };
+		0D1D730620766ED300392E81 /* SetUpAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D730520766ED300392E81 /* SetUpAccountViewController.swift */; };
+		0D1EC4462062812100C6E33A /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EC4452062812100C6E33A /* PostsTableViewController.swift */; };
+		0D1EC4492062C63400C6E33A /* ReadUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EC4482062C63400C6E33A /* ReadUpdateViewController.swift */; };
 		0D1F19A8203C5D2C00E0733A /* LearnJapaneseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F19A7203C5D2C00E0733A /* LearnJapaneseTableViewController.swift */; };
 		0D2FC389201693F4001F2872 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2FC388201693F4001F2872 /* LogIn.storyboard */; };
 		0D66EA50205D619400F16D01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D66EA4F205D619400F16D01 /* GoogleService-Info.plist */; };
@@ -22,12 +32,11 @@
 		0D7346611FD9AC49005175E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D73465F1FD9AC49005175E9 /* LaunchScreen.storyboard */; };
 		0D73466C1FD9AC4A005175E9 /* KarateAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D73466B1FD9AC4A005175E9 /* KarateAppTests.swift */; };
 		0D7346771FD9AC4A005175E9 /* KarateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7346761FD9AC4A005175E9 /* KarateAppUITests.swift */; };
+		0D8C200B2075010600870767 /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C200A2075010600870767 /* MyAPIClient.swift */; };
 		0D9126452018EC0800EF870B /* Learning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126432018EC0800EF870B /* Learning.storyboard */; };
 		0D9126472018EC2F00EF870B /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126462018EC2F00EF870B /* Payment.storyboard */; };
 		0D91264A2018EE7000EF870B /* Updates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126482018EE7000EF870B /* Updates.storyboard */; };
 		0D91264C2018F4AC00EF870B /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */; };
-		0D91264E2018F4CB00EF870B /* UpdatesTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91264D2018F4CB00EF870B /* UpdatesTabTableViewController.swift */; };
-		0D9126502018F4E700EF870B /* PaymentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91264F2018F4E600EF870B /* PaymentTabViewController.swift */; };
 		0D9126522018F51500EF870B /* LearningTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9126512018F51500EF870B /* LearningTabTableViewController.swift */; };
 		0D9126562018FE2600EF870B /* GetTheDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9126552018FE2600EF870B /* GetTheDate.swift */; };
 		0D912659201905BB00EF870B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D912658201905BB00EF870B /* Settings.storyboard */; };
@@ -62,6 +71,18 @@
 		0D05EA502035B95D00D8D0C5 /* UpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateModel.swift; sourceTree = "<group>"; };
 		0D05EA542035BA6600D8D0C5 /* UpdatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewCell.swift; sourceTree = "<group>"; };
 		0D0BB67E203A0526006F9033 /* LearnTechniqueTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTechniqueTableViewController.swift; sourceTree = "<group>"; };
+		0D1D4E0E206D2C8400AACFB2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		0D1D72F62076614B00392E81 /* PaymentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewController.swift; sourceTree = "<group>"; };
+		0D1D72F8207661AB00392E81 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		0D1D72FA207661B100392E81 /* CheckoutRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRowView.swift; sourceTree = "<group>"; };
+		0D1D72FC207661B900392E81 /* PaymentContextFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentContextFooterView.swift; sourceTree = "<group>"; };
+		0D1D72FE207661C200392E81 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		0D1D73012076624100392E81 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0D1D730320766A9A00392E81 /* ConnectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionModel.swift; sourceTree = "<group>"; };
+		0D1D730520766ED300392E81 /* SetUpAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpAccountViewController.swift; sourceTree = "<group>"; };
+		0D1EC4452062812100C6E33A /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		0D1EC4472062C52F00C6E33A /* 01 street fighter.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 street fighter.m4a"; sourceTree = "<group>"; };
+		0D1EC4482062C63400C6E33A /* ReadUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadUpdateViewController.swift; sourceTree = "<group>"; };
 		0D1F19A7203C5D2C00E0733A /* LearnJapaneseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnJapaneseTableViewController.swift; sourceTree = "<group>"; };
 		0D2FC388201693F4001F2872 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		0D66EA4F205D619400F16D01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -78,12 +99,11 @@
 		0D7346721FD9AC4A005175E9 /* KarateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7346761FD9AC4A005175E9 /* KarateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarateAppUITests.swift; sourceTree = "<group>"; };
 		0D7346781FD9AC4A005175E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D8C200A2075010600870767 /* MyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
 		0D9126442018EC0800EF870B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = KarateApp/Storyboard/Base.lproj/Learning.storyboard; sourceTree = "<group>"; };
 		0D9126462018EC2F00EF870B /* Payment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		0D9126492018EE7000EF870B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = KarateApp/Storyboard/Base.lproj/Updates.storyboard; sourceTree = "<group>"; };
 		0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
-		0D91264D2018F4CB00EF870B /* UpdatesTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabTableViewController.swift; sourceTree = "<group>"; };
-		0D91264F2018F4E600EF870B /* PaymentTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTabViewController.swift; sourceTree = "<group>"; };
 		0D9126512018F51500EF870B /* LearningTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningTabTableViewController.swift; sourceTree = "<group>"; };
 		0D9126552018FE2600EF870B /* GetTheDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTheDate.swift; sourceTree = "<group>"; };
 		0D912658201905BB00EF870B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -140,6 +160,42 @@
 				0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		0D1D7300207661CE00392E81 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				0D1D72F8207661AB00392E81 /* CheckoutViewController.swift */,
+				0D1D73012076624100392E81 /* SettingsViewController.swift */,
+				0D1D72FE207661C200392E81 /* Buttons.swift */,
+				0D1D72FA207661B100392E81 /* CheckoutRowView.swift */,
+				0D1D72FC207661B900392E81 /* PaymentContextFooterView.swift */,
+				0D1D72F62076614B00392E81 /* PaymentsTableViewController.swift */,
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		0D1EC44A2062C8E200C6E33A /* UpdatesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D1EC4482062C63400C6E33A /* ReadUpdateViewController.swift */,
+				0D1EC4452062812100C6E33A /* PostsTableViewController.swift */,
+			);
+			path = UpdatesControllers;
+			sourceTree = "<group>";
+		};
+		0D1EC44B2062C90500C6E33A /* LearningControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */,
+				0DE26C382046F0E0009841E1 /* JapaneseVideoViewController.swift */,
+				0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */,
+				0DE26C362046F0C5009841E1 /* JapaneseAudioViewController.swift */,
+				0D1F19A7203C5D2C00E0733A /* LearnJapaneseTableViewController.swift */,
+				0D0BB67E203A0526006F9033 /* LearnTechniqueTableViewController.swift */,
+				0D9126512018F51500EF870B /* LearningTabTableViewController.swift */,
+			);
+			path = LearningControllers;
 			sourceTree = "<group>";
 		};
 		0D2FC38A2016941E001F2872 /* Storyboard */ = {
@@ -213,18 +269,13 @@
 		0D9126532018F53300EF870B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */,
-				0DE26C382046F0E0009841E1 /* JapaneseVideoViewController.swift */,
-				0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */,
-				0DE26C362046F0C5009841E1 /* JapaneseAudioViewController.swift */,
+				0D1D730520766ED300392E81 /* SetUpAccountViewController.swift */,
+				0D1D7300207661CE00392E81 /* Payments */,
+				0D1EC44A2062C8E200C6E33A /* UpdatesControllers */,
+				0D1EC44B2062C90500C6E33A /* LearningControllers */,
 				0D91265C2019097B00EF870B /* SignUpViewController.swift */,
 				0D91265A2019096000EF870B /* LogInViewController.swift */,
 				0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */,
-				0D91264D2018F4CB00EF870B /* UpdatesTabTableViewController.swift */,
-				0D1F19A7203C5D2C00E0733A /* LearnJapaneseTableViewController.swift */,
-				0D0BB67E203A0526006F9033 /* LearnTechniqueTableViewController.swift */,
-				0D91264F2018F4E600EF870B /* PaymentTabViewController.swift */,
-				0D9126512018F51500EF870B /* LearningTabTableViewController.swift */,
 				0D05EA532035BA3500D8D0C5 /* TableCells */,
 			);
 			path = ViewControllers;
@@ -233,6 +284,8 @@
 		0D9126542018F57E00EF870B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D1D4E0E206D2C8400AACFB2 /* Header.h */,
+				0D1EC4472062C52F00C6E33A /* 01 street fighter.m4a */,
 				0D7346561FD9AC49005175E9 /* AppDelegate.swift */,
 				0D73465D1FD9AC49005175E9 /* Assets.xcassets */,
 			);
@@ -244,6 +297,8 @@
 			children = (
 				0D9126552018FE2600EF870B /* GetTheDate.swift */,
 				0D05EA502035B95D00D8D0C5 /* UpdateModel.swift */,
+				0D8C200A2075010600870767 /* MyAPIClient.swift */,
+				0D1D730320766A9A00392E81 /* ConnectionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,7 +398,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Vinesh Mistry";
 				TargetAttributes = {
 					0D7346521FD9AC49005175E9 = {
@@ -423,6 +478,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-KarateApp/Pods-KarateApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
@@ -431,6 +487,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
@@ -582,15 +639,24 @@
 				0D7346591FD9AC49005175E9 /* ViewController.swift in Sources */,
 				0DE26C332046EF83009841E1 /* JapanesePageViewController.swift in Sources */,
 				0D05EA512035B95D00D8D0C5 /* UpdateModel.swift in Sources */,
+				0D1D72F72076614B00392E81 /* PaymentsTableViewController.swift in Sources */,
 				0D05EA552035BA6600D8D0C5 /* UpdatesTableViewCell.swift in Sources */,
-				0D9126502018F4E700EF870B /* PaymentTabViewController.swift in Sources */,
 				0D7346571FD9AC49005175E9 /* AppDelegate.swift in Sources */,
+				0D8C200B2075010600870767 /* MyAPIClient.swift in Sources */,
+				0D1D73022076624100392E81 /* SettingsViewController.swift in Sources */,
+				0D1EC4492062C63400C6E33A /* ReadUpdateViewController.swift in Sources */,
 				0DDA6919201E3C1000B658D3 /* LearningTableViewCell.swift in Sources */,
-				0D91264E2018F4CB00EF870B /* UpdatesTabTableViewController.swift in Sources */,
 				0D91265B2019096000EF870B /* LogInViewController.swift in Sources */,
+				0D1D72FB207661B100392E81 /* CheckoutRowView.swift in Sources */,
 				0D91264C2018F4AC00EF870B /* HomeTabViewController.swift in Sources */,
+				0D1D72FD207661B900392E81 /* PaymentContextFooterView.swift in Sources */,
 				0D91265D2019097B00EF870B /* SignUpViewController.swift in Sources */,
+				0D1D72FF207661C200392E81 /* Buttons.swift in Sources */,
+				0D1D730620766ED300392E81 /* SetUpAccountViewController.swift in Sources */,
+				0D1D72F9207661AB00392E81 /* CheckoutViewController.swift in Sources */,
 				0D9126562018FE2600EF870B /* GetTheDate.swift in Sources */,
+				0D1D730420766A9A00392E81 /* ConnectionModel.swift in Sources */,
+				0D1EC4462062812100C6E33A /* PostsTableViewController.swift in Sources */,
 				0DE26C352046F060009841E1 /* JapaneseTextViewController.swift in Sources */,
 				0D1F19A8203C5D2C00E0733A /* LearnJapaneseTableViewController.swift in Sources */,
 				0D0BB67F203A0526006F9033 /* LearnTechniqueTableViewController.swift in Sources */,
@@ -680,6 +746,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -687,6 +754,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -737,6 +805,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -744,6 +813,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -784,6 +854,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VineshMistry.KarateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KarateApp/Supporting Files/Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -800,6 +871,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VineshMistry.KarateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KarateApp/Supporting Files/Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vbt-0a-j0c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vbt-0a-j0c">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Main-->
         <scene sceneID="MtE-XJ-lCg">
@@ -21,7 +16,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="Rx8-hX-tSR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crX-HC-CFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-528" y="197"/>
+            <point key="canvasLocation" x="921" y="642"/>
         </scene>
         <!--Log In-->
         <scene sceneID="Bkj-LT-cQR">
@@ -57,7 +52,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Rx8-hX-tSR" kind="show" id="aon-Vh-29S"/>
+                                            <action selector="logInButtonTapped:" destination="Vbt-0a-j0c" eventType="touchUpInside" id="usg-WJ-LQb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -109,6 +104,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g18-hl-NR8"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="EEi-1L-7og" id="zYr-wQ-Icf"/>
+                        <outlet property="passwordTextField" destination="cOr-yf-3T8" id="lCR-BT-P28"/>
+                        <segue destination="Rx8-hX-tSR" kind="show" identifier="toHome" id="Taf-Vr-KHT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENA-bs-dEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,6 +154,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpButtonTapped:" destination="lwS-je-LKy" eventType="touchUpInside" id="xgh-JH-7Pf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -171,7 +174,7 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Already Have An Account?"/>
                                 <connections>
-                                    <segue destination="Vbt-0a-j0c" kind="show" id="Ujv-4e-cVi"/>
+                                    <segue destination="Vbt-0a-j0c" kind="show" identifier="returnToSignIn" id="Ujv-4e-cVi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,10 +194,88 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3cA-7k-FG0"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="v3j-2y-5je" id="3Z1-l3-CAM"/>
+                        <outlet property="nameTextField" destination="yl8-hO-h8g" id="20u-SX-cEe"/>
+                        <outlet property="passwordTextField" destination="R8G-eZ-dA6" id="bo4-Ee-Hgb"/>
+                        <segue destination="afq-9F-ao9" kind="show" identifier="accountDetails" id="WdC-zO-scs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQs-7Z-3h6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1008.75" y="43.75"/>
         </scene>
+        <!--Set Up Account View Controller-->
+        <scene sceneID="eqb-6i-Rfb">
+            <objects>
+                <viewController id="afq-9F-ao9" customClass="SetUpAccountViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sJw-V3-ZT7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="O19-7f-bD2">
+                                <rect key="frame" x="0.0" y="81" width="321" height="407"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="CV4-Ue-owp">
+                                        <rect key="frame" x="0.5" y="0.0" width="320" height="240"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Grade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haa-Hm-35r">
+                                                <rect key="frame" x="0.0" y="0.0" width="174.5" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-B2-ela">
+                                                <rect key="frame" x="0.0" y="24" width="320" height="216"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LST-xL-CjV">
+                                        <rect key="frame" x="74.5" y="290" width="172.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructor?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiu-Jc-kvV">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="31"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DoM-xr-AGO">
+                                                <rect key="frame" x="123.5" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5P-lN-Jkl">
+                                        <rect key="frame" x="134.5" y="371" width="52" height="36"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Finish"/>
+                                        <connections>
+                                            <segue destination="Rx8-hX-tSR" kind="show" identifier="goToHome" id="EJr-AJ-9ey"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O19-7f-bD2" firstAttribute="top" secondItem="yvC-j1-AtR" secondAttribute="top" constant="61" id="6Q1-9l-YcW"/>
+                            <constraint firstItem="O19-7f-bD2" firstAttribute="centerX" secondItem="sJw-V3-ZT7" secondAttribute="centerX" id="NVG-Kr-VFE"/>
+                            <constraint firstItem="O19-7f-bD2" firstAttribute="centerY" secondItem="sJw-V3-ZT7" secondAttribute="centerY" id="XSl-i0-Jgg"/>
+                            <constraint firstItem="O19-7f-bD2" firstAttribute="leading" secondItem="sJw-V3-ZT7" secondAttribute="leading" id="smj-0X-0F6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yvC-j1-AtR"/>
+                    </view>
+                    <connections>
+                        <outlet property="gradePicker" destination="gmf-B2-ela" id="diu-yu-9bE"/>
+                        <outlet property="instructorLabel" destination="kiu-Jc-kvV" id="lNu-Sx-pKI"/>
+                        <outlet property="instructorSwitch" destination="DoM-xr-AGO" id="bMR-1Z-C88"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9d5-3j-2hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2025" y="43"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Taf-Vr-KHT"/>
+    </inferredMetricsTieBreakers>
 </document>
