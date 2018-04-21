@@ -1,14 +1,14 @@
 //
-//  LogInViewController.swift
+//  SettingsViewController.swift
 //  KarateApp
 //
-//  Created by Vinesh Mistry on 24/01/2018.
+//  Created by Vinesh Mistry on 21/04/2018.
 //  Copyright © 2018 Vinesh Mistry. All rights reserved.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

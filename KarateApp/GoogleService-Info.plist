@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1090261177913-gsqk5a6dv67u9pcrvjbvb33bn8dlalco.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1090261177913-gsqk5a6dv67u9pcrvjbvb33bn8dlalco</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA5-9jKDKQSu7TBW0ROjagV5J5if-Lb0BY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1090261177913</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>VineshMistry.KarateApp</string>
+	<key>PROJECT_ID</key>
+	<string>karatetest-5ddce</string>
+	<key>STORAGE_BUCKET</key>
+	<string>karatetest-5ddce.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1090261177913:ios:8e05527578a38d10</string>
+	<key>DATABASE_URL</key>
+	<string>https://karatetest-5ddce.firebaseio.com</string>
+</dict>
+</plist>

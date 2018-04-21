@@ -1,29 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PAA-34-7Qz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PAA-34-7Qz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--App Settings View Controller-->
         <scene sceneID="HqX-I8-nyQ">
             <objects>
-                <viewController id="PAA-34-7Qz" sceneMemberID="viewController">
+                <viewController id="PAA-34-7Qz" customClass="AppSettingsViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pOM-kU-7bD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ng1-b0-oIA">
+                                <rect key="frame" x="20" y="293" width="335" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bde-SP-mhB">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <state key="normal" title="Return to Home"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8g-Bu-cIr">
+                                        <rect key="frame" x="0.0" y="50" width="335" height="30"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Log Out">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logOutButtonPressed:" destination="PAA-34-7Qz" eventType="touchUpInside" id="VAr-OF-QGZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NY8-VI-zXV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ng1-b0-oIA" secondAttribute="bottom" constant="294" id="1ax-X3-uSp"/>
+                            <constraint firstItem="oCq-4e-opZ" firstAttribute="trailing" secondItem="Ng1-b0-oIA" secondAttribute="trailing" constant="20" id="E5f-Zl-Cpt"/>
+                            <constraint firstItem="Ng1-b0-oIA" firstAttribute="leading" secondItem="oCq-4e-opZ" secondAttribute="leading" constant="20" id="cxD-SA-1QE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oCq-4e-opZ"/>
                     </view>
+                    <connections>
+                        <segue destination="W0J-Qt-e7A" kind="presentation" identifier="logOut" id="sUv-Pp-3R8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7O8-tR-Ikg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="172"/>
+            <point key="canvasLocation" x="296.80000000000001" y="171.36431784107947"/>
+        </scene>
+        <!--LogIn-->
+        <scene sceneID="dye-BT-vJ9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogIn" id="W0J-Qt-e7A" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epV-6h-i8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="308"/>
         </scene>
     </scenes>
 </document>

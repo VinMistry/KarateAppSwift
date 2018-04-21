@@ -19,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         STPPaymentConfiguration.shared().publishableKey = "pk_test_A4Vv106oLEnFpOXDBSObhyOE"
+        let userLoginStatus = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        if(userLoginStatus)
+        {
+            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeView = mainStoryBoard.instantiateInitialViewController()
+            window!.rootViewController = homeView
+            window?.makeKeyAndVisible()
+        }
         return true
     }
 
