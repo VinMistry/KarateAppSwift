@@ -181,11 +181,21 @@
                     <navigationItem key="navigationItem" title="Add Post" largeTitleDisplayMode="never" id="yrt-hj-emb">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KoA-HI-v5v">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="usb-9q-lNM" id="urg-LW-pi9"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="DVX-Dj-77a">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="usb-9q-lNM" id="tYv-rQ-vwb"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mainBodyTextView" destination="SVK-sa-1qT" id="0Hu-JB-Prp"/>
+                        <outlet property="titleTextField" destination="WbQ-5p-6my" id="gFE-Zq-eb1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umd-QO-jaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,9 +7,21 @@
 //
 
 import UIKit
-
+import Firebase
 class AddUpdateViewController: UIViewController, UINavigationControllerDelegate {
-
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var mainBodyTextView: UITextView!
+    
+    var ref = Database.database().reference()
+    
+    var numberOfPosts : Int! {
+        didSet {
+            print(numberOfPosts)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.title = "Add New Post"
@@ -17,21 +29,34 @@ class AddUpdateViewController: UIViewController, UINavigationControllerDelegate 
         navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        numberOfPosts = numberOfPosts+1
+        if let title = titleTextField.text,
+            let body = mainBodyTextView.text {
+            self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "title" : title])
+            self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "text" : body])
+            self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "dateAndTime" : "\(Date().description)"])
+            dismiss(animated: true, completion: nil)
+        }
+        
+        
     }
-    */
-
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

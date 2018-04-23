@@ -184,7 +184,10 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
             }
         }
         if segue.identifier == "addPost"{
-            
+            if let dest = (segue.destination.contents as? AddUpdateViewController) {
+                dest.numberOfPosts = reversedArr.count
+                print(reversedArr.count)
+            }
         }
     }
 }

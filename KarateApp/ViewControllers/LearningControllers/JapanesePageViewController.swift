@@ -28,7 +28,7 @@ class JapanesePageViewController: UIPageViewController , UIPageViewControllerDat
         super.viewDidLoad()
         self.delegate = self
         self.dataSource = self
-    
+        navigationController?.title = optionSelected
         // Do any additional setup after loading the view.
         setViewControllers([subViewControllers[0]], direction: .forward, animated: true, completion: nil)
         configPageCController()
