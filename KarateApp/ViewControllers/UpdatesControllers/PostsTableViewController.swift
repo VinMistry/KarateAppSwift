@@ -13,6 +13,7 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
     //MARK: Outlets
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
     //MARK: Private Variables
     private var currentPostArray = [UpdateModel]()
     private var postCollection = [UpdateModel]()
@@ -21,7 +22,7 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
     private var post = UpdateModel()
     
     //MARK: Public Variables
-    
+    var shouldAddButton : Bool = false
     //Creates a refresh control, which allows data to be refreshed when pulling down on table view
     lazy var refresher: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -34,6 +35,10 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
         return refreshControl
     }()
     
+    @objc private func addTapped() {
+        print("Starting addTapped")
+        performSegue(withIdentifier: "addPost", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +46,13 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
         refreshControl = refresher
         ref = Database.database().reference()
         setPosts()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self ,action: #selector(self.addTapped))
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        shouldAddPostButtonAppear()
+        }
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -66,6 +71,29 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
             }
             self.currentPostArray = self.reversedArr
             self.tableView.reloadData()
+            
+        }
+    }
+    var isInstructor : Bool = false
+    
+    private func shouldAddPostButtonAppear() {
+        if Auth.auth().currentUser != nil{
+            let userID = Auth.auth().currentUser?.uid
+            ref.child("users").child(userID!).child("instructor").observeSingleEvent(of: .value) { (newSnap) in
+                print(newSnap)
+                if let val = newSnap.value as? Bool {
+                    print(val)
+                    self.isInstructor = val
+                    if(self.isInstructor == true) {
+                        print(self.isInstructor)
+                        self.navigationItem.rightBarButtonItem?.isEnabled = true
+                        self.navigationItem.rightBarButtonItem?.title = "Add Post"
+                    }
+                }
+            }
+        }
+        else {
+            print("No User!")
         }
     }
     
@@ -137,7 +165,7 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
         cell.updateBodyLabel.text = currentPostArray[indexPath.row].updateText
         return cell
     }
-
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -154,6 +182,9 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
                 segueToMVC.updateTitle = reversedArr[indexPath.row].updateTitle
                 segueToMVC.updateText = reversedArr[indexPath.row].updateText
             }
+        }
+        if segue.identifier == "addPost"{
+            
         }
     }
 }

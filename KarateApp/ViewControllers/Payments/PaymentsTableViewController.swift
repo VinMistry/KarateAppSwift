@@ -42,15 +42,25 @@ class PaymentsTableViewController: UITableViewController {
          return productsAndPrices.count
     }
 
+    // Make the background color show through
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "payments", for: indexPath)
-        
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "payments", for: indexPath) as? PaymentsTableViewCell
+        else {
+                return UITableViewCell()
+        }
         // Configure the cell...
         let product = Array(self.productsAndPrices.keys)[(indexPath as NSIndexPath).row]
         let price = self.productsAndPrices[product]!
-        cell.textLabel?.text = product
-        cell.detailTextLabel?.text = "£\(price/100).00"
+        cell.mainTextLabel.text = product
+        cell.priceLabel.text = "£\(price/100).00"
         cell.accessoryType = .disclosureIndicator
+        cell.sizeToFit()
         return cell
     }
     

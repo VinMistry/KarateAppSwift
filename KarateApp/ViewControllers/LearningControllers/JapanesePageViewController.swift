@@ -10,6 +10,7 @@ import UIKit
 
 class JapanesePageViewController: UIPageViewController , UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
+
     lazy var subViewControllers:[UIViewController] = {
         return [
             UIStoryboard(name: "Learning", bundle: nil).instantiateViewController(withIdentifier: "JapaneseText") as! JapaneseTextViewController,
@@ -20,11 +21,14 @@ class JapanesePageViewController: UIPageViewController , UIPageViewControllerDat
     
     var pageContr = UIPageControl()
     
+    var optionSelected : String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
         self.dataSource = self
-        
+    
         // Do any additional setup after loading the view.
         setViewControllers([subViewControllers[0]], direction: .forward, animated: true, completion: nil)
         configPageCController()
@@ -36,13 +40,14 @@ class JapanesePageViewController: UIPageViewController , UIPageViewControllerDat
         // Dispose of any resources that can be recreated.
     }
     
+
     func configPageCController() {
-        pageContr = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY-50, width: UIScreen.main.bounds.width, height: 50))
+        pageContr = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY-200, width: UIScreen.main.bounds.width, height: 50))
         pageContr.numberOfPages = subViewControllers.count
         pageContr.currentPage = 0
         pageContr.tintColor = UIColor.blue
-        pageContr.pageIndicatorTintColor = UIColor.black
-        pageContr.currentPageIndicatorTintColor = UIColor.white
+        pageContr.pageIndicatorTintColor = UIColor.lightGray
+        pageContr.currentPageIndicatorTintColor = UIColor.black
         self.view.addSubview(pageContr)
     }
     

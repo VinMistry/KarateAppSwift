@@ -39,7 +39,11 @@
 		0D9126522018F51500EF870B /* LearningTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9126512018F51500EF870B /* LearningTabTableViewController.swift */; };
 		0D9126562018FE2600EF870B /* GetTheDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9126552018FE2600EF870B /* GetTheDate.swift */; };
 		0D912659201905BB00EF870B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D912658201905BB00EF870B /* Settings.storyboard */; };
+		0D913665208D11C800860FB5 /* AddUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D913664208D11C800860FB5 /* AddUpdateViewController.swift */; };
+		0D913667208D259D00860FB5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D913666208D259D00860FB5 /* UserModel.swift */; };
 		0D925E94208B7B0700A4D48E /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D925E93208B7B0700A4D48E /* AppSettingsViewController.swift */; };
+		0D9A3EAB208E8BCB000CAF6A /* JapaneseTextSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A3EAA208E8BCB000CAF6A /* JapaneseTextSection.swift */; };
+		0D9A3EAD208E8CAC000CAF6A /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A3EAC208E8CAC000CAF6A /* ExpandableHeaderView.swift */; };
 		0DDA6919201E3C1000B658D3 /* LearningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */; };
 		0DE26C332046EF83009841E1 /* JapanesePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */; };
 		0DE26C352046F060009841E1 /* JapaneseTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */; };
@@ -49,6 +53,7 @@
 		0DFE3DAA208B85A6006E43CB /* SetUpAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE3DA6208B85A5006E43CB /* SetUpAccountViewController.swift */; };
 		0DFE3DAB208B85A6006E43CB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE3DA7208B85A5006E43CB /* SignUpViewController.swift */; };
 		0DFE3DAC208B85A6006E43CB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE3DA8208B85A6006E43CB /* ForgotPasswordViewController.swift */; };
+		0DFE3DB0208B8958006E43CB /* PaymentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE3DAF208B8958006E43CB /* PaymentsTableViewCell.swift */; };
 		17B78B0BC5A91D5EB9CA72FD /* Pods_KarateAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F981280006596BBC00BCD /* Pods_KarateAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +112,11 @@
 		0D9126512018F51500EF870B /* LearningTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningTabTableViewController.swift; sourceTree = "<group>"; };
 		0D9126552018FE2600EF870B /* GetTheDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTheDate.swift; sourceTree = "<group>"; };
 		0D912658201905BB00EF870B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		0D913664208D11C800860FB5 /* AddUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateViewController.swift; sourceTree = "<group>"; };
+		0D913666208D259D00860FB5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0D925E93208B7B0700A4D48E /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
+		0D9A3EAA208E8BCB000CAF6A /* JapaneseTextSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseTextSection.swift; sourceTree = "<group>"; };
+		0D9A3EAC208E8CAC000CAF6A /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LearningTableViewCell.swift; path = KarateApp/ViewControllers/TableCells/LearningTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanesePageViewController.swift; sourceTree = "<group>"; };
 		0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseTextViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +126,7 @@
 		0DFE3DA6208B85A5006E43CB /* SetUpAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpAccountViewController.swift; sourceTree = "<group>"; };
 		0DFE3DA7208B85A5006E43CB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0DFE3DA8208B85A6006E43CB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		0DFE3DAF208B8958006E43CB /* PaymentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewCell.swift; sourceTree = "<group>"; };
 		171398A3246842A5B52A4D1C /* Pods-KarateAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KarateAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KarateAppTests/Pods-KarateAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		374AF51D8CD6D250BF880209 /* Pods-KarateAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KarateAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KarateAppUITests/Pods-KarateAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		43F1E2EB270D5E1473231563 /* Pods-KarateAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KarateAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KarateAppUITests/Pods-KarateAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 			children = (
 				0D05EA542035BA6600D8D0C5 /* UpdatesTableViewCell.swift */,
 				0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */,
+				0DFE3DAF208B8958006E43CB /* PaymentsTableViewCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 			children = (
 				0D1EC4482062C63400C6E33A /* ReadUpdateViewController.swift */,
 				0D1EC4452062812100C6E33A /* PostsTableViewController.swift */,
+				0D913664208D11C800860FB5 /* AddUpdateViewController.swift */,
 			);
 			path = UpdatesControllers;
 			sourceTree = "<group>";
@@ -300,6 +312,9 @@
 				0D05EA502035B95D00D8D0C5 /* UpdateModel.swift */,
 				0D8C200A2075010600870767 /* MyAPIClient.swift */,
 				0D1D730320766A9A00392E81 /* ConnectionModel.swift */,
+				0D913666208D259D00860FB5 /* UserModel.swift */,
+				0D9A3EAA208E8BCB000CAF6A /* JapaneseTextSection.swift */,
+				0D9A3EAC208E8CAC000CAF6A /* ExpandableHeaderView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -651,6 +666,7 @@
 				0D7346591FD9AC49005175E9 /* ViewController.swift in Sources */,
 				0DFE3DAC208B85A6006E43CB /* ForgotPasswordViewController.swift in Sources */,
 				0DE26C332046EF83009841E1 /* JapanesePageViewController.swift in Sources */,
+				0D913665208D11C800860FB5 /* AddUpdateViewController.swift in Sources */,
 				0D05EA512035B95D00D8D0C5 /* UpdateModel.swift in Sources */,
 				0D1D72F72076614B00392E81 /* PaymentsTableViewController.swift in Sources */,
 				0DFE3DAA208B85A6006E43CB /* SetUpAccountViewController.swift in Sources */,
@@ -671,6 +687,10 @@
 				0D9126562018FE2600EF870B /* GetTheDate.swift in Sources */,
 				0D1D730420766A9A00392E81 /* ConnectionModel.swift in Sources */,
 				0D1EC4462062812100C6E33A /* PostsTableViewController.swift in Sources */,
+				0DFE3DB0208B8958006E43CB /* PaymentsTableViewCell.swift in Sources */,
+				0D913667208D259D00860FB5 /* UserModel.swift in Sources */,
+				0D9A3EAD208E8CAC000CAF6A /* ExpandableHeaderView.swift in Sources */,
+				0D9A3EAB208E8BCB000CAF6A /* JapaneseTextSection.swift in Sources */,
 				0DE26C352046F060009841E1 /* JapaneseTextViewController.swift in Sources */,
 				0D1F19A8203C5D2C00E0733A /* LearnJapaneseTableViewController.swift in Sources */,
 				0D0BB67F203A0526006F9033 /* LearnTechniqueTableViewController.swift in Sources */,

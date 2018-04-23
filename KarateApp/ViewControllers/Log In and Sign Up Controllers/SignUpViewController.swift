@@ -44,6 +44,21 @@ class SignUpViewController: UIViewController {
                         }
                         print("User Successfully Added To DB")
                     })
+                    Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
+                        if user != nil {
+                            UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+                            UserDefaults.standard.synchronize()
+                        }
+                        else{
+                            //Error: check message show message
+                            print(error ?? "")
+                            let alert = UIAlertController(title: "Error: Unable to Sign In", message: error?.localizedDescription, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                                NSLog("The \"OK\" alert occured.")
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    })
                     self.performSegue(withIdentifier: "accountDetails", sender: self)
                 }
                 else {
@@ -60,6 +75,7 @@ class SignUpViewController: UIViewController {
             })
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //Dismiss keyboard when view is tapped on
         nameTextField.resignFirstResponder()

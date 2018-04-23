@@ -12,7 +12,7 @@ class LearnJapaneseTableViewController: UITableViewController {
     
     
     var japaneseOptions = ["Greetings", "Numbers", "Techniques"]
-    
+    var optionSelected : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +52,29 @@ class LearnJapaneseTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            print(japaneseOptions[0])
+            optionSelected = japaneseOptions[0]
+            performSegue(withIdentifier: "showDetailLearning", sender: self)
+           
+        case 1:
+             print(japaneseOptions[1])
+             optionSelected = japaneseOptions[1]
+            performSegue(withIdentifier: "showDetailLearning", sender: self)
+            
+        case 2:
+             print(japaneseOptions[2])
+             optionSelected = japaneseOptions[2]
+            performSegue(withIdentifier: "showDetailLearning", sender: self)
+            
+        default:
+            print("No Path")
+        }
+        print(optionSelected, "after swtich" )
+    }
+    
     
     /*
      // Override to support conditional editing of the table view.
@@ -88,14 +111,21 @@ class LearnJapaneseTableViewController: UITableViewController {
      }
      */
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
+        let dest = segue.destination as? JapanesePageViewController
+        print("Segue \(self.optionSelected)")
+        dest?.optionSelected = self.optionSelected
+        if let textV = dest?.subViewControllers[0] as? JapaneseTextViewController {
+            textV.optionSelected = self.optionSelected
+        }
+    
      }
-     */
+    
     
 }
