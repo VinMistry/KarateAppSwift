@@ -14,6 +14,8 @@ class AppSettingsViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        navigationController?.title = "Settings"
+       
     }
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
         let firebaseAuth = Auth.auth()
@@ -32,6 +34,9 @@ class AppSettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backToHomeButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     /*
      // MARK: - Navigation

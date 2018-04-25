@@ -42,7 +42,7 @@ class JapanesePageViewController: UIPageViewController , UIPageViewControllerDat
     
 
     func configPageCController() {
-        pageContr = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY-200, width: UIScreen.main.bounds.width, height: 50))
+        pageContr = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY-210, width: UIScreen.main.bounds.width, height: 50))
         pageContr.numberOfPages = subViewControllers.count
         pageContr.currentPage = 0
         pageContr.tintColor = UIColor.blue

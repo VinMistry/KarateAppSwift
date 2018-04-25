@@ -46,6 +46,7 @@ class SetUpAccountViewController: UIViewController, UIPickerViewDelegate, UIPick
         }
         else{
             instructorSwitch.isUserInteractionEnabled = false
+            instructorSwitch.isOn = false
         }
         return gradesArray[row]
     }

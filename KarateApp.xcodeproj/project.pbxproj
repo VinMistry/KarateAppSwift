@@ -18,11 +18,11 @@
 		0D1D72FD207661B900392E81 /* PaymentContextFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D72FC207661B900392E81 /* PaymentContextFooterView.swift */; };
 		0D1D72FF207661C200392E81 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D72FE207661C200392E81 /* Buttons.swift */; };
 		0D1D73022076624100392E81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D73012076624100392E81 /* SettingsViewController.swift */; };
-		0D1D730420766A9A00392E81 /* ConnectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D730320766A9A00392E81 /* ConnectionModel.swift */; };
 		0D1EC4462062812100C6E33A /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EC4452062812100C6E33A /* PostsTableViewController.swift */; };
 		0D1EC4492062C63400C6E33A /* ReadUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EC4482062C63400C6E33A /* ReadUpdateViewController.swift */; };
 		0D1F19A8203C5D2C00E0733A /* LearnJapaneseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F19A7203C5D2C00E0733A /* LearnJapaneseTableViewController.swift */; };
 		0D2FC389201693F4001F2872 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2FC388201693F4001F2872 /* LogIn.storyboard */; };
+		0D420812208F6D3500E7B9F2 /* Ohayougozaimasu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D420811208F6D3400E7B9F2 /* Ohayougozaimasu.mp3 */; };
 		0D66EA50205D619400F16D01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D66EA4F205D619400F16D01 /* GoogleService-Info.plist */; };
 		0D7346571FD9AC49005175E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7346561FD9AC49005175E9 /* AppDelegate.swift */; };
 		0D7346591FD9AC49005175E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7346581FD9AC49005175E9 /* ViewController.swift */; };
@@ -85,11 +85,11 @@
 		0D1D72FC207661B900392E81 /* PaymentContextFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentContextFooterView.swift; sourceTree = "<group>"; };
 		0D1D72FE207661C200392E81 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		0D1D73012076624100392E81 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		0D1D730320766A9A00392E81 /* ConnectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionModel.swift; sourceTree = "<group>"; };
 		0D1EC4452062812100C6E33A /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		0D1EC4482062C63400C6E33A /* ReadUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadUpdateViewController.swift; sourceTree = "<group>"; };
 		0D1F19A7203C5D2C00E0733A /* LearnJapaneseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnJapaneseTableViewController.swift; sourceTree = "<group>"; };
 		0D2FC388201693F4001F2872 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
+		0D420811208F6D3400E7B9F2 /* Ohayougozaimasu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ohayougozaimasu.mp3; sourceTree = "<group>"; };
 		0D66EA4F205D619400F16D01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D7346531FD9AC49005175E9 /* KarateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KarateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7346561FD9AC49005175E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +227,14 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		0D420810208F6D1800E7B9F2 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				0D420811208F6D3400E7B9F2 /* Ohayougozaimasu.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		0D73464A1FD9AC49005175E9 = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +261,7 @@
 		0D7346551FD9AC49005175E9 /* KarateApp */ = {
 			isa = PBXGroup;
 			children = (
+				0D420810208F6D1800E7B9F2 /* Music */,
 				0D2FC38A2016941E001F2872 /* Storyboard */,
 				0D9126532018F53300EF870B /* ViewControllers */,
 				0D9126572018FE3300EF870B /* Models */,
@@ -285,11 +294,11 @@
 			isa = PBXGroup;
 			children = (
 				0D925E93208B7B0700A4D48E /* AppSettingsViewController.swift */,
+				0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */,
 				0DFE3DAE208B85DD006E43CB /* Log In and Sign Up Controllers */,
 				0D1D7300207661CE00392E81 /* Payments */,
 				0D1EC44A2062C8E200C6E33A /* UpdatesControllers */,
 				0D1EC44B2062C90500C6E33A /* LearningControllers */,
-				0D91264B2018F4AC00EF870B /* HomeTabViewController.swift */,
 				0D05EA532035BA3500D8D0C5 /* TableCells */,
 			);
 			path = ViewControllers;
@@ -311,7 +320,6 @@
 				0D9126552018FE2600EF870B /* GetTheDate.swift */,
 				0D05EA502035B95D00D8D0C5 /* UpdateModel.swift */,
 				0D8C200A2075010600870767 /* MyAPIClient.swift */,
-				0D1D730320766A9A00392E81 /* ConnectionModel.swift */,
 				0D913666208D259D00860FB5 /* UserModel.swift */,
 				0D9A3EAA208E8BCB000CAF6A /* JapaneseTextSection.swift */,
 				0D9A3EAC208E8CAC000CAF6A /* ExpandableHeaderView.swift */,
@@ -475,6 +483,7 @@
 				0D2FC389201693F4001F2872 /* LogIn.storyboard in Resources */,
 				0D912659201905BB00EF870B /* Settings.storyboard in Resources */,
 				0D7346611FD9AC49005175E9 /* LaunchScreen.storyboard in Resources */,
+				0D420812208F6D3500E7B9F2 /* Ohayougozaimasu.mp3 in Resources */,
 				0D91264A2018EE7000EF870B /* Updates.storyboard in Resources */,
 				0D73465E1FD9AC49005175E9 /* Assets.xcassets in Resources */,
 				0D73465C1FD9AC49005175E9 /* Main.storyboard in Resources */,
@@ -685,7 +694,6 @@
 				0D1D72FF207661C200392E81 /* Buttons.swift in Sources */,
 				0D1D72F9207661AB00392E81 /* CheckoutViewController.swift in Sources */,
 				0D9126562018FE2600EF870B /* GetTheDate.swift in Sources */,
-				0D1D730420766A9A00392E81 /* ConnectionModel.swift in Sources */,
 				0D1EC4462062812100C6E33A /* PostsTableViewController.swift in Sources */,
 				0DFE3DB0208B8958006E43CB /* PaymentsTableViewCell.swift in Sources */,
 				0D913667208D259D00860FB5 /* UserModel.swift in Sources */,

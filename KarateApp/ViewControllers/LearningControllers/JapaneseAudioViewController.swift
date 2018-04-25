@@ -7,13 +7,22 @@
 //
 
 import UIKit
-
+import AVFoundation
 class JapaneseAudioViewController: UIViewController {
 
+    var audioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        do {
         // Do any additional setup after loading the view.
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Ohayougozaimasu" , ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+        }
+        catch{
+            print(error)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +30,18 @@ class JapaneseAudioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func playSound(_ sender: UIButton) {
+        audioPlayer.play()
+    }
+    
+    @IBAction func pauseSound(_ sender: UIButton) {
+        if(audioPlayer.isPlaying){
+            audioPlayer.pause()
+        }
+        else{
+            
+        }
+    }
     /*
     // MARK: - Navigation
 
