@@ -23,6 +23,8 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
     
     //MARK: Public Variables
     var shouldAddButton : Bool = false
+    var isInstructor : Bool = false
+    
     //Creates a refresh control, which allows data to be refreshed when pulling down on table view
     lazy var refresher: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -74,7 +76,6 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
             
         }
     }
-    var isInstructor : Bool = false
     
     private func shouldAddPostButtonAppear() {
         if Auth.auth().currentUser != nil{
@@ -140,6 +141,7 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.tableView.endEditing(true)
+        self.searchBar.endEditing(true)
     }
     
     // MARK: - Table view data source
@@ -191,6 +193,7 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
         }
     }
 }
+//Allows access to the view controller which is embedded in the navigation controller
 extension UIViewController {
     var contents: UIViewController {
         if let navcon = self as? UINavigationController {

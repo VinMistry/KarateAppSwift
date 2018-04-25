@@ -26,7 +26,6 @@ class AddUpdateViewController: UIViewController, UINavigationControllerDelegate 
         super.viewDidLoad()
         navigationController?.title = "Add New Post"
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
     }
     
@@ -39,10 +38,19 @@ class AddUpdateViewController: UIViewController, UINavigationControllerDelegate 
         numberOfPosts = numberOfPosts+1
         if let title = titleTextField.text,
             let body = mainBodyTextView.text {
-            self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "title" : title])
-            self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "text" : body])
-            self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "dateAndTime" : "\(Date().description)"])
-            dismiss(animated: true, completion: nil)
+            if title.isEmpty || body.isEmpty {
+                let alert = UIAlertController(title: "Error: Empty", message: "Title or Main Text is Empty. Please make sure both fields are filled in", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "title" : title])
+                self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "text" : body])
+                self.ref.child("Posts").child(numberOfPosts.description).updateChildValues([ "dateAndTime" : "\(Date().description)"])
+                dismiss(animated: true, completion: nil)
+            }
         }
         
         

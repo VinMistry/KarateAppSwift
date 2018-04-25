@@ -38,6 +38,7 @@ class HomeTabViewController: UIViewController, UITableViewDelegate ,UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
     var count = 0
     private func setPosts() {
         count = 0
@@ -59,7 +60,6 @@ class HomeTabViewController: UIViewController, UITableViewDelegate ,UITableViewD
             }
             self.tableView.reloadData()
         }
-        
     }
     
     
