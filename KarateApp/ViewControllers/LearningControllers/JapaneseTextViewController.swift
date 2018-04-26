@@ -15,12 +15,12 @@ class JapaneseTextViewController: UIViewController, UITableViewDelegate ,UITable
     @IBOutlet weak var tableView: UITableView!
     
     var greetingSections = [
-        JapaneseTextSection(section: "Good Morning", textToAdd: ["Ohayō gozaimasu", "おはよう　ございます", "お早う御座います"], expanded: false),
-        JapaneseTextSection(section: "Hello/Good Day", textToAdd: ["Konnichiwa", "こんにちは", "今日は"], expanded: false),
-          JapaneseTextSection(section: "Good Evening", textToAdd: ["Konbanwa", "こんばんは"], expanded: false),
-         JapaneseTextSection(section: "Good Night", textToAdd: ["Oyasumi nasai", "おやすみ　なさい"], expanded: false),
-         JapaneseTextSection(section: "Goodbye", textToAdd: ["Sayōnara", "さようなら"], expanded: false),
-         JapaneseTextSection(section: "Goodbye (Formal)", textToAdd: ["Shitsurei shimasu", "しつれい　します", "失礼します"], expanded: false)
+        JapaneseTextSection(section: "Good Morning", textToAdd: ["Ohayō gozaimasu", "Hiragana: おはよう　ございます", "Kanji: お早う御座います"], expanded: false),
+        JapaneseTextSection(section: "Hello/Good Day", textToAdd: ["Konnichiwa", "Hiragana: こんにちは", "Kanji: 今日は"], expanded: false),
+          JapaneseTextSection(section: "Good Evening", textToAdd: ["Konbanwa", "Hiragana: こんばんは"], expanded: false),
+         JapaneseTextSection(section: "Good Night", textToAdd: ["Oyasumi nasai", "Hiragana: おやすみ　なさい"], expanded: false),
+         JapaneseTextSection(section: "Goodbye", textToAdd: ["Sayōnara", "Hiragana: さようなら"], expanded: false),
+         JapaneseTextSection(section: "Goodbye (Formal)", textToAdd: ["Shitsurei shimasu", "Hiragana: しつれい　します", "Kanji: 失礼します"], expanded: false)
     ]
     
     var numberSections = [
@@ -40,10 +40,19 @@ class JapaneseTextViewController: UIViewController, UITableViewDelegate ,UITable
     
     ]
     
-    var techniqueSections = [
-        JapaneseTextSection(section: "Punch", textToAdd: ["Ichi", "一"], expanded: false),
-        JapaneseTextSection(section: "Kick", textToAdd: ["Ni", "二"], expanded: false)
-        
+    var colourSections = [
+        JapaneseTextSection(section: "Colour", textToAdd: ["Iro", "Kanji: 色", "Hiragana: いろ"], expanded: false),
+        JapaneseTextSection(section: "White", textToAdd: ["Shiro", "Kanji: 白", "Hiragana: しろ"], expanded: false),
+        JapaneseTextSection(section: "Red", textToAdd: ["Aka", "Kanji: 赤", "Hiragana: あか"], expanded: false),
+        JapaneseTextSection(section: "Yellow", textToAdd: ["Ki-iro", "Kanji: 黄色" , "Hiragana: きいろ"], expanded: false),
+        JapaneseTextSection(section: "Orange", textToAdd: ["Orenji", "Hiragana: オレンジ"], expanded: false),
+        JapaneseTextSection(section: "Green", textToAdd: ["Midori", "Kanji: 緑", "Hiragana: みどり"], expanded: false),
+        JapaneseTextSection(section: "Blue", textToAdd: ["Ao", "Kanji: 青", "Hiragana: あお"], expanded: false),
+        JapaneseTextSection(section: "Purple", textToAdd: ["Murasaki", "Kanji: 紫", "Hiragana: むらさき"], expanded: false),
+        JapaneseTextSection(section: "Brown", textToAdd: ["Cha-iro", "Kanji: 茶色", "Hiragana: ちゃいろ"], expanded: false),
+        JapaneseTextSection(section: "Black", textToAdd: ["Kuro", "Kanji: 黒", "Hiragana: くろ"], expanded: false),
+        JapaneseTextSection(section: "Pink", textToAdd: ["Pinku", "Hiragana: ピンク"], expanded: false),
+        JapaneseTextSection(section: "Gray", textToAdd: ["Hai-iro", "Kanji: 灰色", "Hiragana: はいいろ"], expanded: false)
     ]
     
     var optionSelected : String = "None" {
@@ -55,12 +64,12 @@ class JapaneseTextViewController: UIViewController, UITableViewDelegate ,UITable
                 arrayToDisplay = numberSections
             }
             else{
-                arrayToDisplay = techniqueSections
+                arrayToDisplay = colourSections
             }
         }
     }
     
-    var arrayToDisplay : [JapaneseTextSection] = [JapaneseTextSection(section: "1", textToAdd: ["Ichi", "一"], expanded: false)]
+    var arrayToDisplay : [JapaneseTextSection]!
     
     override func viewDidLoad() {
         super.viewDidLoad()

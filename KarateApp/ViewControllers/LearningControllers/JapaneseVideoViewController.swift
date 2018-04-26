@@ -24,7 +24,7 @@ class JapaneseVideoViewController: UIViewController {
                     videoCode = "bOUqVC4XkOY"
                 }
                 else{
-                   videoCode = ""
+                   videoCode = "2WEfJ2zBFqs"
                 }
             }
     }

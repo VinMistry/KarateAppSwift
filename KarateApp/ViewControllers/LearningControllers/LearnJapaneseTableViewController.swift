@@ -11,7 +11,7 @@ import UIKit
 class LearnJapaneseTableViewController: UITableViewController {
     
     
-    var japaneseOptions = ["Greetings", "Numbers", "Techniques"]
+    var japaneseOptions = ["Greetings", "Numbers", "Colours"]
     var optionSelected : String = ""
     
     override func viewDidLoad() {
