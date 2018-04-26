@@ -7,13 +7,34 @@
 //
 
 import UIKit
-
+import WebKit
 class JapaneseVideoViewController: UIViewController {
 
+    @IBOutlet weak var videoWebView: WKWebView!
+    
+    @IBOutlet weak var optionSelectedLabel: UILabel!
+    
+    var videoCode : String = "uU5lkWqcdm0"
+    var optionSelected : String = "None" {
+            didSet {
+                if(optionSelected == "Greetings"){
+                    videoCode = "uU5lkWqcdm0"
+                }
+                else if(optionSelected == "Numbers"){
+                    videoCode = "bOUqVC4XkOY"
+                }
+                else{
+                   videoCode = ""
+                }
+            }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getVideo(videoCode: videoCode)
         // Do any additional setup after loading the view.
+        optionSelectedLabel.text = "Watch \(optionSelected)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +42,10 @@ class JapaneseVideoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func getVideo(videoCode : String) {
+        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+        videoWebView.load(URLRequest(url: url!))
     }
-    */
 
 }

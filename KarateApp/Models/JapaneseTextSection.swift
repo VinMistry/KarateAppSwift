@@ -9,9 +9,13 @@
 import Foundation
 
 struct JapaneseTextSection {
+
+    //MARK: Variables
     var section : String!
     var textToAdd : [String]!
     var expanded : Bool!
+    
+    //MARK: Initialisers
     
     init(section: String, textToAdd: [String], expanded: Bool ) {
         self.section = section

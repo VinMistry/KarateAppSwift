@@ -16,19 +16,69 @@ class JapaneseAudioViewController: UIViewController, UITableViewDelegate ,UITabl
     
     @IBOutlet weak var optionSelected: UILabel!
     
-    var arrayToDisplay : [JapaneseAudioSection] = [JapaneseAudioSection(section: "Good Morning", expanded: false), JapaneseAudioSection(section: "Hello", expanded: false)]
+    var greetingsArray : [JapaneseAudioSection] = [
+        JapaneseAudioSection(section: "Good Morning", expanded: false),
+        JapaneseAudioSection(section: "Hello/Good Day", expanded: false),
+        JapaneseAudioSection(section: "Good Evening",  expanded: false),
+        JapaneseAudioSection(section: "Good Night",  expanded: false),
+        JapaneseAudioSection(section: "Goodbye",  expanded: false),
+        JapaneseAudioSection(section: "Goodbye (Formal)", expanded: false)]
     
-    var urlArray = [URL.init(fileURLWithPath: Bundle.main.path(forResource: "Ohayougozaimasu" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "flock-of-seagulls_daniel-simion" , ofType: "mp3")!)]
+    var numberArray = [
+        JapaneseAudioSection(section: "1", expanded: false),
+        JapaneseAudioSection(section: "2", expanded: false),
+        JapaneseAudioSection(section: "3", expanded: false),
+        JapaneseAudioSection(section: "4", expanded: false),
+        JapaneseAudioSection(section: "5", expanded: false),
+        JapaneseAudioSection(section: "6", expanded: false),
+        JapaneseAudioSection(section: "7", expanded: false),
+        JapaneseAudioSection(section: "8", expanded: false),
+        JapaneseAudioSection(section: "9", expanded: false),
+        JapaneseAudioSection(section: "10", expanded: false),
+    ]
+    
+    var techniqueArray : [JapaneseAudioSection] = [JapaneseAudioSection(section: "Punch", expanded: false), JapaneseAudioSection(section: "Kick", expanded: false)]
+    
+   var arrayToUse : [JapaneseAudioSection]!
+    
+    var urlArrayGreetings = [URL.init(fileURLWithPath: Bundle.main.path(forResource: "G1" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "G2" , ofType: "mp3")!),URL.init(fileURLWithPath: Bundle.main.path(forResource: "G3" , ofType: "mp3")!),URL.init(fileURLWithPath: Bundle.main.path(forResource: "G4" , ofType: "mp3")!),URL.init(fileURLWithPath: Bundle.main.path(forResource: "G5" , ofType: "mp3")!),URL.init(fileURLWithPath: Bundle.main.path(forResource: "G6" , ofType: "mp3")!)]
+    
+     var urlArrayNumbers = [
+        URL.init(fileURLWithPath: Bundle.main.path(forResource: "1" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "2" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "3" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "4" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "5" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "6" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "7" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "8" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "9" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "10" , ofType: "wav")!)]
+    
+     var urlArrayTechniques = [ URL.init(fileURLWithPath: Bundle.main.path(forResource: "1" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "2" , ofType: "wav")!)]
     
     var audioPlayers : [AVAudioPlayer]?
+    
+    var urlsToUse : [URL]!
+    
+    var optionSelect : String = "None" {
+        didSet {
+            if(optionSelect == "Greetings"){
+                urlsToUse = urlArrayGreetings
+                arrayToUse = greetingsArray
+            }
+            else if(optionSelect == "Numbers"){
+                urlsToUse = urlArrayNumbers
+                arrayToUse = numberArray
+            }
+            else{
+                urlsToUse = urlArrayTechniques
+                arrayToUse = techniqueArray
+            }
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        optionSelected.text = "Listen"
+        optionSelected.text = "Listen to \(optionSelect)"
         
     }
+    
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,7 +86,7 @@ class JapaneseAudioViewController: UIViewController, UITableViewDelegate ,UITabl
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return arrayToDisplay.count
+        return arrayToUse.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -46,7 +96,7 @@ class JapaneseAudioViewController: UIViewController, UITableViewDelegate ,UITabl
         return 44
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(arrayToDisplay[indexPath.section].expanded){
+        if(arrayToUse[indexPath.section].expanded){
             return 44
         }
         else {
@@ -59,7 +109,7 @@ class JapaneseAudioViewController: UIViewController, UITableViewDelegate ,UITabl
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ExpandableHeaderView()
-        header.customInit(title: arrayToDisplay[section].section, section: section, delegate: self)
+        header.customInit(title: arrayToUse[section].section, section: section, delegate: self)
         return header
     }
     
@@ -67,42 +117,28 @@ class JapaneseAudioViewController: UIViewController, UITableViewDelegate ,UITabl
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "learningAudio")! as? JapaneseAudioTableViewCell else {
             return UITableViewCell()
         }
-        do {
-            audioPlayer =  try AVAudioPlayer(contentsOf: urlArray[indexPath.row])
-          //  audioPlayers![indexPath.section] = audioPlayer
-            audioPlayer.prepareToPlay()
-        }
-        catch {
-            print(error)
-        }
-        cell.audioPlayer = audioPlayer
-        cell.audioPlayer.prepareToPlay()
+        
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        do {
-            audioPlayer =  try AVAudioPlayer(contentsOf: urlArray[indexPath.section])
-            audioPlayer.prepareToPlay()
+        let path = urlsToUse[indexPath.section]
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: path )
+            audioPlayer.play()
         }
         catch {
-            print(error)
-        }
-        if(audioPlayer.isPlaying){
-             audioPlayer.pause()
-        }
-        else{
-            //audioPlayers![indexPath.section].play()
-            let cell = tableView.cellForRow(at: indexPath) as? JapaneseAudioTableViewCell
-            cell?.audioPlayer.play()
+            
         }
     }
     
-    
     func toggleSection(header: ExpandableHeaderView, section: Int) {
-        arrayToDisplay[section].expanded = !arrayToDisplay[section].expanded
+        arrayToUse[section].expanded = !arrayToUse[section].expanded
         tableView.beginUpdates()
-        
+        for i in 0 ..< 1{
+            tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
+        }
         tableView.endUpdates()
     }
     

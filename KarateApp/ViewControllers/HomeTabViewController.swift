@@ -65,7 +65,7 @@ class HomeTabViewController: UIViewController, UITableViewDelegate ,UITableViewD
     
     //MARK: Outlet Maniputlation
     private func setNextClassLabel() {
-        print(dates.getCurrentDate())
+       // print(dates.getCurrentDate())
         nextClassLabel.text = dates.nextClassDate()
     }
     

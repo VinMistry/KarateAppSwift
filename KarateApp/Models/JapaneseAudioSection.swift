@@ -9,10 +9,13 @@
 import Foundation
 
 struct JapaneseAudioSection {
+    //MARK: Variables
     var section : String!
-   
     var expanded : Bool!
     
+    //MARK: Initialisers
+    
+    //Initialises variables
     init(section: String, expanded: Bool ) {
         self.section = section
         self.expanded = expanded

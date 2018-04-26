@@ -4,7 +4,7 @@
 //
 //  Created by Vinesh Mistry on 07/12/2017.
 //  Copyright © 2017 Vinesh Mistry. All rights reserved.
-//
+// Example View Controller Class
 
 import UIKit
 

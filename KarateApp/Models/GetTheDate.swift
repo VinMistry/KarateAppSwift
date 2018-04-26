@@ -16,7 +16,7 @@ class GetTheDate {
     //MARK: Functions
     
     //Formats the current date
-    public func getCurrentDate() -> String {
+    private func getCurrentDate() -> String {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"

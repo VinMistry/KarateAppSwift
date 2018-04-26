@@ -121,8 +121,14 @@ class LearnJapaneseTableViewController: UITableViewController {
         let dest = segue.destination as? JapanesePageViewController
         print("Segue \(self.optionSelected)")
         dest?.optionSelected = self.optionSelected
-        if let textV = dest?.subViewControllers[0] as? JapaneseTextViewController {
-            textV.optionSelected = self.optionSelected
+        if let textViewController = dest?.subViewControllers[0] as? JapaneseTextViewController {
+            textViewController.optionSelected = self.optionSelected
+        }
+        if let audioViewController = dest?.subViewControllers[1] as? JapaneseAudioViewController {
+            audioViewController.optionSelect = self.optionSelected
+        }
+        if let videoViewController = dest?.subViewControllers[2] as? JapaneseVideoViewController {
+            videoViewController.optionSelected = self.optionSelected
         }
     
      }

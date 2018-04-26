@@ -17,9 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //Configures Firebase API
         FirebaseApp.configure()
+        //Sets Stripe publishable key
         STPPaymentConfiguration.shared().publishableKey = "pk_test_A4Vv106oLEnFpOXDBSObhyOE"
+        
+        //Check if user is logged in
         let userLoginStatus = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        //If user logged in, skip log in screen
         if(userLoginStatus)
         {
             let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
