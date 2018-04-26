@@ -53,11 +53,14 @@ class JapaneseAudioViewController: UIViewController, UITableViewDelegate ,UITabl
     
    var arrayToUse : [JapaneseAudioSection]!
     
+    //These audio files are from https://www.rocketlanguages.com/
     var urlArrayGreetings = [URL.init(fileURLWithPath: Bundle.main.path(forResource: "G1" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "G2" , ofType: "mp3")!),URL.init(fileURLWithPath: Bundle.main.path(forResource: "G3" , ofType: "mp3")!),URL.init(fileURLWithPath: Bundle.main.path(forResource: "G4" , ofType: "mp3")!),URL.init(fileURLWithPath: Bundle.main.path(forResource: "G5" , ofType: "mp3")!),URL.init(fileURLWithPath: Bundle.main.path(forResource: "G6" , ofType: "mp3")!)]
     
+   //These audio files are from https://audiograb.com/PzlswssB
      var urlArrayNumbers = [
         URL.init(fileURLWithPath: Bundle.main.path(forResource: "1" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "2" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "3" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "4" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "5" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "6" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "7" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "8" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "9" , ofType: "wav")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "10" , ofType: "wav")!)]
     
+     //These audio files are from https://www.rocketlanguages.com/
      var urlArrayTechniques = [  URL.init(fileURLWithPath: Bundle.main.path(forResource: "C1" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C2" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C3" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C4" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C5" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C6" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C7" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C8" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C9" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C10" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C11" , ofType: "mp3")!), URL.init(fileURLWithPath: Bundle.main.path(forResource: "C12" , ofType: "mp3")!)]
     
     var audioPlayers : [AVAudioPlayer]?

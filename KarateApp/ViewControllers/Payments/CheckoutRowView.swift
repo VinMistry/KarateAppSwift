@@ -2,8 +2,8 @@
 //  CheckoutRowView.swift
 //  Standard Integration (Swift)
 //
-//  Created by Ben Guo on 4/22/16.
-//  Copyright © 2016 Stripe. All rights reserved.
+//  Created by Vinesh Mistry on 05/04/2018.
+//  Copyright © 2018 Vinesh Mistry. All rights reserved.
 //
 
 import UIKit
