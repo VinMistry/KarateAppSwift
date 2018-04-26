@@ -46,6 +46,7 @@ class LogInViewController: UIViewController {
         }
     }
     
+    //Colapses keyboard to allow user to continue navigating etc 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
