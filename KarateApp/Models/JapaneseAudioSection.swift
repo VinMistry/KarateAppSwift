@@ -19,5 +19,5 @@ struct JapaneseAudioSection {
     init(section: String, expanded: Bool ) {
         self.section = section
         self.expanded = expanded
-}
+    }
 }

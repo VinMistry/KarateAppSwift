@@ -132,8 +132,7 @@ class JapaneseAudioViewController: UIViewController, UITableViewDelegate ,UITabl
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "learningAudio")! as? JapaneseAudioTableViewCell else {
             return UITableViewCell()
         }
-        
-        
+        cell.playPause.text = "Play Audio for \(arrayToUse[indexPath.section].section.description)"
         return cell
     }
     

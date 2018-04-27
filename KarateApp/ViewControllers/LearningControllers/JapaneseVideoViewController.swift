@@ -42,7 +42,7 @@ class JapaneseVideoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //Gets the video from a URL and loads it into the web view
     func getVideo(videoCode : String) {
         let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
         videoWebView.load(URLRequest(url: url!))
