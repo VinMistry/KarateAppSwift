@@ -33,10 +33,15 @@ class HomeTabViewController: UIViewController, UITableViewDelegate ,UITableViewD
         tableView.dataSource = self
         ref = Database.database().reference()
         setPosts()
+        print(dates.nextClassDate())
+        print(dates.daysTillNextClass)
+        print(dates.getAFutureDate(addDays: dates.daysTillNextClass))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        reversedArr.removeAll()
+        setPosts()
     }
     
     var count = 0

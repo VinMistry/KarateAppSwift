@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Stripe
 class AppSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -26,6 +27,10 @@ class AppSettingsViewController: UIViewController {
         }
         UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
         UserDefaults.standard.synchronize()
+        let cookieStore = HTTPCookieStorage.shared
+        for cookie in cookieStore.cookies ?? [] {
+            cookieStore.deleteCookie(cookie)
+        }
         performSegue(withIdentifier: "logOut", sender: self)
     }
     

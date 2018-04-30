@@ -8,21 +8,20 @@
 
 import UIKit
 import Stripe
-
+import Firebase
 class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
-
+    
+    let dateModel = GetTheDate()
+    
     // 1) To get started with this demo, first head to https://dashboard.stripe.com/account/apikeys
     // and copy your "Test Publishable Key" (it looks like pk_test_abcdef) into the line below.
     let stripePublishableKey = "pk_test_A4Vv106oLEnFpOXDBSObhyOE"
     
-    // 2) Next, optionally, to have this demo save your user's payment details, head to
-    // https://github.com/stripe/example-ios-backend , click "Deploy to Heroku", and follow
-    // the instructions (don't worry, it's free). Replace nil on the line below with your
-    // Heroku URL (it looks like https://blazing-sunrise-1234.herokuapp.com ).
+    let userName = (Auth.auth().currentUser?.uid)!
+    
     let backendBaseURL: String? = "https://stripe-vm2amt.herokuapp.com"
 
     // 3) Optionally, to enable Apple Pay, follow the instructions at https://stripe.com/docs/mobile/apple-pay
-    // to create an Apple Merchant ID. Replace nil on the line below with it (it looks like merchant.com.yourappname).
     let appleMerchantID: String? = nil
     
     // These values will be shown to the user when they purchase with Apple Pay.
@@ -160,6 +159,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
       /*  self.shippingRow.onTap = { [weak self]  in
             self?.paymentContext.pushShippingViewController()
         }*/
+        print(dateModel.nextClassDate())
     }
 
     override func viewDidLayoutSubviews() {
@@ -208,7 +208,8 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
             message = error?.localizedDescription ?? ""
         case .success:
             title = "Success"
-            message = "You bought a \(self.product)!"
+            message = "You have payed for: \(self.product)!"
+            Database.database().reference().child("Payments").child(dateModel.getAFutureDate(addDays: dateModel.daysTillNextClass)).updateChildValues([userName : self.product])
         case .userCancellation:
             return
         }
@@ -217,7 +218,8 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
-
+    
+    
     func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
         self.paymentRow.loading = paymentContext.loading
         if let paymentMethod = paymentContext.selectedPaymentMethod {
@@ -235,6 +237,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         self.totalRow.detail = self.numberFormatter.string(from: NSNumber(value: Float(self.paymentContext.paymentAmount)/100))!
     }
 
+    //Failed to load the payment context producing an error
     func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
         let alertController = UIAlertController(
             title: "Error",
@@ -254,8 +257,8 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         self.present(alertController, animated: true, completion: nil)
     }
 
-    // Note: this delegate method is optional. If you do not need to collect a
-    // shipping method from your user, you should not implement this method.
+    //For Shipments, only implement if shipments are needed.
+    /*
     func paymentContext(_ paymentContext: STPPaymentContext, didUpdateShippingAddress address: STPAddress, completion: @escaping STPShippingMethodsCompletionBlock) {
         let upsGround = PKShippingMethod()
         upsGround.amount = 0
@@ -287,6 +290,6 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
                 completion(.valid, nil, [upsWorldwide, fedEx], fedEx)
             }
         }
-    }
+    }*/
 
 }

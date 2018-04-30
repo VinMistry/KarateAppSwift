@@ -10,8 +10,8 @@ import UIKit
 
 class PaymentsTableViewController: UITableViewController {
     let productsAndPrices = [
-        "Single": 500,
-        "Monthly":2500,
+        "Single Lesson": 500,
+        "A Month":2500,
         ]
     
     let settingsVC = SettingsViewController()
