@@ -39,7 +39,7 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
     
     @objc private func addTapped() {
         print("Starting addTapped")
-        performSegue(withIdentifier: "addPost", sender: self)
+        self.performSegue(withIdentifier: "addPost", sender: self)
     }
     
     override func viewDidLoad() {
@@ -60,12 +60,13 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    private func setPosts() {
+    func setPosts() {
         ref.child("Posts").observeSingleEvent(of: .value) { (newSnap) in
             print(newSnap)
             for child in newSnap.children {
                 let snap = child as? DataSnapshot
-                guard let post = UpdateModel(snap!) else { print("No Snap"); return}
+                let updateNumber = Int((snap?.key)!)!
+                guard let post = UpdateModel(snap!, updateNumber) else { print("No Snap"); return}
                 self.postCollection.append(post)
             }
             for post in self.postCollection.reversed() {
@@ -168,6 +169,8 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
         return cell
     }
     
+    
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -183,12 +186,15 @@ class PostsTableViewController: UITableViewController, UISearchBarDelegate  {
                 print("Segue text", reversedArr[indexPath.row].updateText)
                 segueToMVC.updateTitle = reversedArr[indexPath.row].updateTitle
                 segueToMVC.updateText = reversedArr[indexPath.row].updateText
+                segueToMVC.isInstructor = self.isInstructor
+                let postNumber = reversedArr[indexPath.row].updateNumber
+                segueToMVC.postNumber = postNumber
             }
         }
         if segue.identifier == "addPost"{
-            if let dest = (segue.destination.contents as? AddUpdateViewController) {
-                dest.numberOfPosts = reversedArr.count
-                print(reversedArr.count)
+           if let dest = (segue.destination.contents as? AddUpdateViewController) {
+                print("ADD POST: " ,reversedArr[0].updateNumber)
+                dest.numberOfPosts = reversedArr[0].updateNumber
             }
         }
     }

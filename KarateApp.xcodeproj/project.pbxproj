@@ -58,7 +58,7 @@
 		0D73465C1FD9AC49005175E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D73465A1FD9AC49005175E9 /* Main.storyboard */; };
 		0D73465E1FD9AC49005175E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D73465D1FD9AC49005175E9 /* Assets.xcassets */; };
 		0D7346611FD9AC49005175E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D73465F1FD9AC49005175E9 /* LaunchScreen.storyboard */; };
-		0D73466C1FD9AC4A005175E9 /* KarateAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D73466B1FD9AC4A005175E9 /* KarateAppTests.swift */; };
+		0D73466C1FD9AC4A005175E9 /* UpdateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D73466B1FD9AC4A005175E9 /* UpdateModelTests.swift */; };
 		0D7346771FD9AC4A005175E9 /* KarateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7346761FD9AC4A005175E9 /* KarateAppUITests.swift */; };
 		0D8C200B2075010600870767 /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C200A2075010600870767 /* MyAPIClient.swift */; };
 		0D9126452018EC0800EF870B /* Learning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9126432018EC0800EF870B /* Learning.storyboard */; };
@@ -73,6 +73,8 @@
 		0D925E94208B7B0700A4D48E /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D925E93208B7B0700A4D48E /* AppSettingsViewController.swift */; };
 		0D9A3EAB208E8BCB000CAF6A /* JapaneseTextSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A3EAA208E8BCB000CAF6A /* JapaneseTextSection.swift */; };
 		0D9A3EAD208E8CAC000CAF6A /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A3EAC208E8CAC000CAF6A /* ExpandableHeaderView.swift */; };
+		0DBEBAAE209A69FF00D3A8DC /* DateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEBAAD209A69FF00D3A8DC /* DateModelTests.swift */; };
+		0DBEBAB0209A6AC400D3A8DC /* ViewControllerMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEBAAF209A6AC400D3A8DC /* ViewControllerMethodTests.swift */; };
 		0DDA6919201E3C1000B658D3 /* LearningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */; };
 		0DE26C332046EF83009841E1 /* JapanesePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */; };
 		0DE26C352046F060009841E1 /* JapaneseTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */; };
@@ -157,7 +159,7 @@
 		0D7346601FD9AC49005175E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D7346621FD9AC49005175E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D7346671FD9AC4A005175E9 /* KarateAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarateAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D73466B1FD9AC4A005175E9 /* KarateAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarateAppTests.swift; sourceTree = "<group>"; };
+		0D73466B1FD9AC4A005175E9 /* UpdateModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateModelTests.swift; sourceTree = "<group>"; };
 		0D73466D1FD9AC4A005175E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D7346721FD9AC4A005175E9 /* KarateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7346761FD9AC4A005175E9 /* KarateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarateAppUITests.swift; sourceTree = "<group>"; };
@@ -175,6 +177,8 @@
 		0D925E93208B7B0700A4D48E /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		0D9A3EAA208E8BCB000CAF6A /* JapaneseTextSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseTextSection.swift; sourceTree = "<group>"; };
 		0D9A3EAC208E8CAC000CAF6A /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		0DBEBAAD209A69FF00D3A8DC /* DateModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModelTests.swift; sourceTree = "<group>"; };
+		0DBEBAAF209A6AC400D3A8DC /* ViewControllerMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMethodTests.swift; sourceTree = "<group>"; };
 		0DDA6918201E3C1000B658D3 /* LearningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LearningTableViewCell.swift; path = KarateApp/ViewControllers/TableCells/LearningTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		0DE26C322046EF83009841E1 /* JapanesePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanesePageViewController.swift; sourceTree = "<group>"; };
 		0DE26C342046F060009841E1 /* JapaneseTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseTextViewController.swift; sourceTree = "<group>"; };
@@ -377,8 +381,10 @@
 		0D73466A1FD9AC4A005175E9 /* KarateAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0D73466B1FD9AC4A005175E9 /* KarateAppTests.swift */,
+				0D73466B1FD9AC4A005175E9 /* UpdateModelTests.swift */,
 				0D73466D1FD9AC4A005175E9 /* Info.plist */,
+				0DBEBAAD209A69FF00D3A8DC /* DateModelTests.swift */,
+				0DBEBAAF209A6AC400D3A8DC /* ViewControllerMethodTests.swift */,
 			);
 			path = KarateAppTests;
 			sourceTree = "<group>";
@@ -843,7 +849,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D73466C1FD9AC4A005175E9 /* KarateAppTests.swift in Sources */,
+				0D73466C1FD9AC4A005175E9 /* UpdateModelTests.swift in Sources */,
+				0DBEBAB0209A6AC400D3A8DC /* ViewControllerMethodTests.swift in Sources */,
+				0DBEBAAE209A69FF00D3A8DC /* DateModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

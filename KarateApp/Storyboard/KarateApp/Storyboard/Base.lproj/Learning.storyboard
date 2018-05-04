@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="-1350" y="649"/>
         </scene>
-        <!--Japanese Video View Controller-->
+        <!--Watch-->
         <scene sceneID="t0W-Fq-rdX">
             <objects>
-                <viewController storyboardIdentifier="JapaneseVideo" id="Q1U-tQ-nuT" customClass="JapaneseVideoViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JapaneseVideo" title="Watch" id="Q1U-tQ-nuT" customClass="JapaneseVideoViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oqy-gO-TVz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +186,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ela-PK-F0P">
-                                <rect key="frame" x="16" y="103" width="288" height="212"/>
+                                <rect key="frame" x="16" y="60" width="288" height="343"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" video="YES"/>
@@ -198,8 +198,8 @@
                         <constraints>
                             <constraint firstItem="Ela-PK-F0P" firstAttribute="leading" secondItem="oqy-gO-TVz" secondAttribute="leadingMargin" id="DAM-SF-bqi"/>
                             <constraint firstItem="PJQ-7W-A7t" firstAttribute="centerX" secondItem="Ela-PK-F0P" secondAttribute="centerX" id="DLQ-zA-gOt"/>
-                            <constraint firstItem="MIr-VG-qML" firstAttribute="bottom" secondItem="Ela-PK-F0P" secondAttribute="bottom" constant="253" id="Nqz-hU-bh2"/>
-                            <constraint firstItem="Ela-PK-F0P" firstAttribute="top" secondItem="MIr-VG-qML" secondAttribute="top" constant="83" id="TeM-DG-Bta"/>
+                            <constraint firstItem="MIr-VG-qML" firstAttribute="bottom" secondItem="Ela-PK-F0P" secondAttribute="bottom" constant="165" id="Nqz-hU-bh2"/>
+                            <constraint firstItem="Ela-PK-F0P" firstAttribute="top" secondItem="MIr-VG-qML" secondAttribute="top" constant="40" id="TeM-DG-Bta"/>
                             <constraint firstItem="Ela-PK-F0P" firstAttribute="trailing" secondItem="oqy-gO-TVz" secondAttribute="trailingMargin" id="cdJ-UW-wxK"/>
                             <constraint firstItem="PJQ-7W-A7t" firstAttribute="top" secondItem="MIr-VG-qML" secondAttribute="top" id="jxe-vg-IaX"/>
                         </constraints>
@@ -214,10 +214,10 @@
             </objects>
             <point key="canvasLocation" x="-468.75" y="1435.5633802816901"/>
         </scene>
-        <!--Japanese Audio View Controller-->
+        <!--Listen-->
         <scene sceneID="vtq-JK-AkM">
             <objects>
-                <viewController storyboardIdentifier="JapaneseAudio" id="x9m-DN-lA3" customClass="JapaneseAudioViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JapaneseAudio" title="Listen" id="x9m-DN-lA3" customClass="JapaneseAudioViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tho-im-Jxp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,10 +302,10 @@
             </objects>
             <point key="canvasLocation" x="-1263.75" y="1435.5633802816901"/>
         </scene>
-        <!--Japanese Text View Controller-->
+        <!--Read-->
         <scene sceneID="kYY-yB-1lU">
             <objects>
-                <viewController storyboardIdentifier="JapaneseText" id="aDB-ja-Cad" customClass="JapaneseTextViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JapaneseText" title="Read" id="aDB-ja-Cad" customClass="JapaneseTextViewController" customModule="KarateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S12-uW-7No">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

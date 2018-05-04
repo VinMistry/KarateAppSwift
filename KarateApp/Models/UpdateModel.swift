@@ -14,7 +14,7 @@ class UpdateModel {
     var updateTitle: String
     var updateText: String
     var updateDate: String
-    
+    var updateNumber : Int
     //MARK: Private Variables
     private var ref = Database.database().reference()
     private var  databaseHandle : DatabaseHandle?
@@ -22,10 +22,11 @@ class UpdateModel {
     //MARK: Initialisers
     
     //Basic parameterised initaliser/constructor for creating an example object
-    init(_ updateTitle: String,_ updateMain: String,_ updateDate: String) {
+    init(_ updateTitle: String,_ updateMain: String,_ updateDate: String, _ updateNumber : Int) {
         self.updateTitle = updateTitle
         self.updateText = updateMain
         self.updateDate = updateDate
+        self.updateNumber = updateNumber
     }
     
     //Basic initaliser/constructor for creating an example object
@@ -33,10 +34,11 @@ class UpdateModel {
         self.updateTitle = "Title"
         self.updateText = "Text"
         self.updateDate = "Date"
+        self.updateNumber = 0
     }
     
     //Initialiser takes the data snapshot and gets text, title and date from it
-    init?(_ snapshot: DataSnapshot) {
+    init?(_ snapshot: DataSnapshot,_ number: Int) {
         
         //Creates dictionary (key: value) data structure
         guard let dict = snapshot.value as? [String:Any] else { return nil }
@@ -50,5 +52,6 @@ class UpdateModel {
         self.updateText = updateText
         self.updateTitle = updateTitle
         self.updateDate = updateDate
+        self.updateNumber = number
     }
 }

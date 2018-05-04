@@ -9,11 +9,8 @@
 import XCTest
 @testable import KarateApp
 import Firebase
-class KarateAppTests: XCTestCase {
+class UpdateModelTests: XCTestCase {
     
-    private var postCollection = [UpdateModel]()
-    private var reversedArr = [UpdateModel]()
-    private var post = UpdateModel()
     
     override func setUp() {
         super.setUp()
@@ -31,12 +28,6 @@ class KarateAppTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testNextClassDate() {
-        let nextClass = GetTheDate().nextClassDate()
-        let str = "Friday at 6:45pm"
-        XCTAssertEqual(nextClass, str)
-    }
-    
     func testUpdateModelParameterInit1(){
         let uM = UpdateModel("hello","hello2","hello3")
         XCTAssertEqual(uM.updateTitle, "hello")
@@ -52,23 +43,4 @@ class KarateAppTests: XCTestCase {
         XCTAssertEqual(uM.updateDate, "hello3")
     }
     
-    
-    func testPerformanceGetPostsAndAddToArray() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-            Database.database().reference().child("Posts").observeSingleEvent(of: .value) { (newSnap) in
-                print(newSnap)
-                for child in newSnap.children {
-                    let snap = child as? DataSnapshot
-                    guard let post = UpdateModel(snap!) else { print("No Snap"); return}
-                    self.postCollection.append(post)
-                }
-                for post in self.postCollection.reversed() {
-                    self.reversedArr.append(post)
-                }
-            }
-        }
-        
-    }
 }

@@ -35,7 +35,7 @@ class HomeTabViewController: UIViewController, UITableViewDelegate ,UITableViewD
         setPosts()
         print(dates.nextClassDate())
         print(dates.daysTillNextClass)
-        print(dates.getAFutureDate(addDays: dates.daysTillNextClass))
+        print(dates.getFutureDate(addDays: dates.daysTillNextClass))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +51,8 @@ class HomeTabViewController: UIViewController, UITableViewDelegate ,UITableViewD
             print(newSnap)
             for child in newSnap.children {
                 let snap = child as? DataSnapshot
-                guard let post = UpdateModel(snap!) else { print("No Snap"); return}
+                guard let updateNumber = Int((snap?.key)!) else { print("No Snap"); return }
+                guard let post = UpdateModel(snap!, updateNumber) else { print("No Snap"); return}
                 self.postCollection.append(post)
             }
             for post in self.postCollection.reversed() {

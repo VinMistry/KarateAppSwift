@@ -118,11 +118,12 @@
                     </view>
                     <connections>
                         <outlet property="updateTextView" destination="byR-pf-dn7" id="0jk-3O-bf9"/>
+                        <segue destination="61T-Mo-bEf" kind="show" identifier="editPost" id="Eq4-uj-WWM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNq-mk-xrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1211" y="-824"/>
+            <point key="canvasLocation" x="-1294" y="-825"/>
         </scene>
         <!--Add Post-->
         <scene sceneID="tFK-tf-j5I">
@@ -199,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umd-QO-jaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086.9565217391305" y="-838.04347826086962"/>
+            <point key="canvasLocation" x="1198" y="-824"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sPX-UA-kU6">
@@ -220,4 +221,7 @@
             <point key="canvasLocation" x="345" y="-824"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Eq4-uj-WWM"/>
+    </inferredMetricsTieBreakers>
 </document>

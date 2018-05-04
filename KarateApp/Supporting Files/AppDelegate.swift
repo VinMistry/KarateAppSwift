@@ -21,9 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         //Sets Stripe publishable key
         STPPaymentConfiguration.shared().publishableKey = "pk_test_A4Vv106oLEnFpOXDBSObhyOE"
-        
+       
         //Check if user is logged in
-        let userLoginStatus = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        var userLoginStatus = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        
+        if CommandLine.arguments.contains("--uitesting") {
+            userLoginStatus = false
+        }
         //If user logged in, skip log in screen
         if(userLoginStatus)
         {

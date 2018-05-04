@@ -25,6 +25,14 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        if(nameTextField.text!.isEmpty) {
+            let alert = UIAlertController(title: "Error: Unable to Sign Up", message: "Please Enter Your Name", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         if let email = emailTextField.text, let pass = passwordTextField.text, let name = nameTextField.text
         {
             //Register user with firebase
@@ -52,7 +60,7 @@ class SignUpViewController: UIViewController {
                         else{
                             //Error: check message show message
                             print(error ?? "")
-                            let alert = UIAlertController(title: "Error: Unable to Sign In", message: error?.localizedDescription, preferredStyle: .alert)
+                            let alert = UIAlertController(title: "Error: Unable to Sign Up", message: error?.localizedDescription, preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
                                 NSLog("The \"OK\" alert occured.")
                             }))

@@ -22,11 +22,17 @@ class AddUpdateViewController: UIViewController, UINavigationControllerDelegate 
         }
     }
     
+    var editTitle : String = ""
+    
+    var editText : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "Add New Post"
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         // Do any additional setup after loading the view.
+        //navigationController?.title = "Add New Post"
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        titleTextField.text = editTitle
+        mainBodyTextView.text = editText
     }
     
     

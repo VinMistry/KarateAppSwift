@@ -69,6 +69,7 @@ class CheckoutRowView: UIView {
         self.titleLabel.backgroundColor = UIColor.clear
         self.titleLabel.textAlignment = .left;
         self.titleLabel.font = theme.font
+        self.titleLabel.adjustsFontSizeToFitWidth = true
         self.titleLabel.textColor = theme.primaryForegroundColor
         self.addSubview(self.titleLabel)
         self.detailLabel.text = detail

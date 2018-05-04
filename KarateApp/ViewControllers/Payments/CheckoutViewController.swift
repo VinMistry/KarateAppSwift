@@ -93,7 +93,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         paymentContext.paymentAmount = price
         paymentContext.paymentCurrency = self.paymentCurrency
 
-        let paymentSelectionFooter = PaymentContextFooterView(text: "You can add custom footer views to the payment selection screen.")
+        let paymentSelectionFooter = PaymentContextFooterView(text: "")
         paymentSelectionFooter.theme = settings.theme
         paymentContext.paymentMethodsViewControllerFooterView = paymentSelectionFooter
 
@@ -143,7 +143,8 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         self.activityIndicator.activityIndicatorViewStyle = red < 0.5 ? .white : .gray
         self.navigationItem.title = "Pay For Lesson"
 
-        self.productImage.font = UIFont.systemFont(ofSize: 70)
+        self.productImage.font = UIFont.systemFont(ofSize: 40)
+        self.productImage.adjustsFontSizeToFitWidth = true
         self.view.addSubview(self.totalRow)
         self.view.addSubview(self.paymentRow)
      //   self.view.addSubview(self.shippingRow)
@@ -209,7 +210,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         case .success:
             title = "Success"
             message = "You have payed for: \(self.product)!"
-            Database.database().reference().child("Payments").child(dateModel.getAFutureDate(addDays: dateModel.daysTillNextClass)).updateChildValues([userName : self.product])
+            Database.database().reference().child("Payments").child(dateModel.getFutureDate(addDays: dateModel.daysTillNextClass)).updateChildValues([userName : self.product])
         case .userCancellation:
             return
         }
