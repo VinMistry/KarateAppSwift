@@ -12,5 +12,5 @@ The aim of this project is to:
     -	Set exercises
     -	Track and log attendance  (If possible)
 
-#Download the Project 
+# Download the Project 
 - https://drive.google.com/open?id=1-ayR4CiTMWGdD7dqARpIlEwwx1LuJdKD
